@@ -406,7 +406,7 @@
     },
     "required": "*",
     "submitButton": "Coming Soon",
-    "success": "Your consultation request has been successfully submitted. We will contact you soon.",
+    "success": "Your consultation request has been successfully submitted. We will contact you soon",
     "error": "An error occurred while submitting your request. Please try again."
   },
   "apply": {
@@ -472,7 +472,7 @@
   },
   "global": {
     "title": "Global Communities",
-    "description": "Explore Bitcoin centers, organizations, and communities across all continents. Connect with Bitcoiners worldwide and discover local meetups, educational initiatives, and development hubs.",
+    "description": "Explore Bitcoin centers, organizations, and communities across all continents. Connect with Bitcoiners worldwide and discover local meetups, educational initiatives, and development hubs",
     "continentLinks": {
       "asia": "Asia",
       "europe": "Europe",
@@ -529,7 +529,7 @@
   },
   "globalAsia": {
     "title": "Asia",
-    "description": "Discover Bitcoin organizations across Asia. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across Asia. Learn about various industries and events",
     "countries": {
       "japan": "Japan",
       "korea": "Korea",
@@ -540,7 +540,7 @@
   },
   "globalEurope": {
     "title": "Europe",
-    "description": "Discover Bitcoin organizations across Europe. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across Europe. Learn about various industries and events",
     "countries": {
       "germany": "Germany",
       "switzerland": "Switzerland",
@@ -551,7 +551,7 @@
   },
   "globalAfrica": {
     "title": "Africa",
-    "description": "Discover Bitcoin organizations across Africa. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across Africa. Learn about various industries and events",
     "countries": {
       "south-africa": "South Africa",
       "nigeria": "Nigeria",
@@ -562,7 +562,7 @@
   },
   "globalNorthAmerica": {
     "title": "North America",
-    "description": "Discover Bitcoin organizations across North America. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across North America. Learn about various industries and events",
     "countries": {
       "usa": "United States",
       "canada": "Canada",
@@ -573,7 +573,7 @@
   },
   "globalSouthAmerica": {
     "title": "South America",
-    "description": "Discover Bitcoin organizations across South America. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across South America. Learn about various industries and events",
     "countries": {
       "brazil": "Brazil",
       "argentina": "Argentina",
@@ -584,7 +584,7 @@
   },
   "globalOceania": {
     "title": "Oceania",
-    "description": "Discover Bitcoin organizations across Oceania. Learn about various industries and events.",
+    "description": "Discover Bitcoin organizations across Oceania. Learn about various industries and events",
     "countries": {
       "australia": "Australia",
       "new-zealand": "New Zealand"
@@ -626,10 +626,10 @@
       "consulting": {
         "title": "1:1 Consulting",
         "description": "1:1 consulting for high-net-worth individuals to protect your valuable time",
-        "fullDescription": "Suitable for business people for whom time is money and those with significant assets but find it difficult to learn new technologies. All processes are tailored to the customer's situation and include follow-up support, not just one-time service.",
-        "recommendation": "This consulting is recommended for those with assets over 1 billion won.",
+        "fullDescription": "Suitable for business people for whom time is money and those with significant assets but find it difficult to learn new technologies. All processes are tailored to the customer's situation and include follow-up support, not just one-time service",
+        "recommendation": "This consulting is recommended for those with assets over 1 billion won",
         "dialogTitle": "1:1 Consulting Application",
-        "dialogDescription": "Please fill in the information below and our representative will contact you after review.",
+        "dialogDescription": "Please fill in the information below and our representative will contact you after review",
         "buttonText": "Apply for Consultation"
       }
     },

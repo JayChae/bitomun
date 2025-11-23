@@ -1,4 +1,6 @@
-import { Earth } from "lucide-react";
+import { ArrowLeft, Earth } from "lucide-react";
+
+import { Link } from "@/i18n/navigation";
 
 import { ContinentColorTheme } from "../_constants";
 
@@ -26,6 +28,14 @@ export function ContinentHeader({
           className={`absolute -bottom-32 -left-32 h-72 w-72 rounded-full ${theme.headerGlow2} blur-3xl`}
         />
       </div>
+
+      {/* 뒤로 가기 */}
+      <Link
+        href="/global"
+        className="absolute top-3 left-3 flex size-8 items-center justify-center rounded-lg text-gray-500 transition-colors hover:bg-black/5 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-200"
+      >
+        <ArrowLeft className="size-6" />
+      </Link>
 
       <div className="relative container mx-auto">
         <div className="flex items-center gap-4">
