@@ -6,11 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
+import { ContinentColorTheme } from "../_constants";
+
 type Props = {
   title: string;
   countries: { label: string; value: string }[];
   selectedCountry: string;
   className?: string;
+  theme: ContinentColorTheme;
 };
 
 export function CountrySidebar({
@@ -18,6 +21,7 @@ export function CountrySidebar({
   countries,
   selectedCountry,
   className,
+  theme,
 }: Props) {
   const pathname = usePathname();
   // Extract continent from pathname: /en/global/asia/japan -> asia
@@ -34,9 +38,9 @@ export function CountrySidebar({
             <Button
               key={country.value}
               className={cn(
-                "hover:bg-primary/20 w-full justify-start text-left",
+                `w-full justify-start text-left ${theme.navHover}`,
                 selectedCountry === country.value
-                  ? "bg-primary/50"
+                  ? theme.navActive
                   : "bg-transparent",
               )}
             >

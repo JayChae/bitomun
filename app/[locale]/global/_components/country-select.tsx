@@ -11,13 +11,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Link } from "@/i18n/navigation";
 
+import { ContinentColorTheme } from "../_constants";
+
 type Props = {
   countries: { label: string; value: string }[];
   className?: string;
   placeholder?: string;
+  theme: ContinentColorTheme;
 };
 
-export function CountrySelect({ countries, placeholder }: Props) {
+export function CountrySelect({ countries, placeholder, theme }: Props) {
   const pathname = usePathname();
   // Extract continent from pathname: /en/global/asia/japan -> asia
   const pathParts = pathname.split("/");
@@ -35,7 +38,7 @@ export function CountrySelect({ countries, placeholder }: Props) {
           <DropdownMenuItem key={country.value} asChild className="p-0">
             <Link
               href={`/global/${continent}/${country.value}`}
-              className="hover:bg-primary/20 flex w-full cursor-pointer items-center px-4 py-3 text-base md:px-3 md:py-2 md:text-sm"
+              className={`flex w-full cursor-pointer items-center px-4 py-3 text-base md:px-3 md:py-2 md:text-sm ${theme.navHover}`}
             >
               {country.label}
             </Link>

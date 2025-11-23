@@ -1,5 +1,6 @@
 import { CountryResources, OrganizationCategory } from "@/types";
 
+import { ContinentColorTheme } from "../_constants";
 import { ResourceCard } from "./resource-card";
 
 type ResourceListProps = {
@@ -10,6 +11,7 @@ type ResourceListProps = {
     title: string;
     description: string;
   };
+  theme: ContinentColorTheme;
 };
 
 export function ResourceList({
@@ -17,6 +19,7 @@ export function ResourceList({
   categories,
   categoryLabels,
   emptyState,
+  theme,
 }: ResourceListProps) {
   const hasResources = categories.some(
     (cat) => countryData[cat] && countryData[cat].length > 0,
@@ -56,7 +59,7 @@ export function ResourceList({
           <div key={category} className="relative">
             {/* 카테고리 헤더 */}
             <div className="mb-8 flex items-center gap-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-white shadow-lg shadow-orange-500/25">
+              <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br ${theme.iconGradient} text-white shadow-lg ${theme.iconShadow}`}>
                 <span className="text-lg font-bold">{index + 1}</span>
               </div>
               <h3 className="text-lg font-bold tracking-tight sm:text-xl lg:text-2xl">
@@ -79,6 +82,7 @@ export function ResourceList({
                     logo={resource.logo}
                     name={resource.name}
                     description={resource.description}
+                    theme={theme}
                   />
                 </li>
               ))}
