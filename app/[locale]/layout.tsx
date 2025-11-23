@@ -68,7 +68,7 @@ export async function generateMetadata({
   const title = t("title");
   const description = t("description");
   const baseUrl = "https://www.bitomun.com";
-  const ogImageUrl = `${baseUrl}/images/bitomun_key.png`;
+  const ogImageUrl = `${baseUrl}/images/bitomun_key.webp`;
 
   return {
     title: {
@@ -86,6 +86,7 @@ export async function generateMetadata({
       languages: {
         en: "/en",
         ko: "/ko",
+        "x-default": "/ko", // 기본 언어 (한국어)
       },
     },
     openGraph: {
