@@ -124,7 +124,7 @@ export default async function Home({ params }: Props) {
         description={t("global.description")}
         className="bg-gradient-to-r from-blue-500/10 to-transparent"
       >
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
           {CONTINENTS.map((continent) => (
             <Link
               key={continent.id}
@@ -146,16 +146,17 @@ export default async function Home({ params }: Props) {
                     continent.hoverGradient,
                   )}
                 />
-                <div className="relative flex h-full flex-col justify-end p-5">
-                  <h3 className="text-lg font-bold transition-transform duration-300 group-hover:translate-x-1 md:text-xl">
+                <div className="relative flex h-full flex-col items-center justify-center p-5">
+                  <h3 className="text-xl font-bold md:text-2xl">
                     {t(continent.title)}
                   </h3>
                 </div>
-                <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-white/5 blur-2xl transition-all duration-500 group-hover:scale-150" />
-                <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/5 blur-xl transition-all duration-500 group-hover:scale-150" />
               </div>
             </Link>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/global" text={t("exploreAll")} />
         </div>
       </Section>
 
