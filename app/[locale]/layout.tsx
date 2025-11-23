@@ -38,6 +38,10 @@ export default async function Layout({
         <OrganizationJsonLd locale={locale} />
         <WebsiteJsonLd locale={locale} />
         <EducationalOrganizationJsonLd locale={locale} />
+        <meta
+          name="google-site-verification"
+          content="b6m911ASGXsJQyLp_4ZDSrRIKrOYgszkcfFFcCYJUXA"
+        />
       </head>
       <body
         className={`relative size-full antialiased ${pretendardFont.className} overflow-y-scroll`}
