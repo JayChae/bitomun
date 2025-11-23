@@ -64,7 +64,7 @@ export const australiaResourcesEn: CountryResources = {
       description:
         "Purchase a Bitaxe home miner through our store and start hashing!",
       url: "https://btcclub.com.au/product/bitaxe-601-gamma-bitcoin-solo-miner-bm1370-1-2-th-s/",
-      logo: "https://pbs.twimg.com/profile_images/1796826697784057856/-E7D419N_400x400.jpg",
+      logo: "https://pbs.twimg.com/profile_banners/1549591376643629056/1717125563/1500x500",
     },
   ],
   nodes: [
@@ -185,7 +185,7 @@ export const australiaResourcesKo: CountryResources = {
       description:
         "스토어에서 Bitaxe 홈 마이너를 구매하고 해싱을 시작하세요!",
       url: "https://btcclub.com.au/product/bitaxe-601-gamma-bitcoin-solo-miner-bm1370-1-2-th-s/",
-      logo: "https://pbs.twimg.com/profile_images/1796826697784057856/-E7D419N_400x400.jpg",
+      logo: "https://pbs.twimg.com/profile_banners/1549591376643629056/1717125563/1500x500",
     },
   ],
   nodes: [
