@@ -537,9 +537,17 @@
       "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
     }
   },
-  "globalOceania": {
-    "title": "오세아니아",
-    "description": "오세아니아의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+  "globalEurope": {
+    "title": "유럽",
+    "description": "유럽의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+    "countriesTitle": "국가",
+    "countries": {
+      "germany": "독일",
+      "switzerland": "스위스",
+      "portugal": "포르투갈",
+      "czech": "체코",
+      "uk": "영국"
+    },
     "categories": {
       "center": "센터",
       "events": "행사",
@@ -552,7 +560,108 @@
     },
     "emptyState": {
       "title": "준비중",
-      "description": "이 지역의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
+      "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
+    }
+  },
+  "globalAfrica": {
+    "title": "아프리카",
+    "description": "아프리카의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+    "countriesTitle": "국가",
+    "countries": {
+      "south-africa": "남아프리카공화국",
+      "nigeria": "나이지리아",
+      "kenya": "케냐",
+      "ghana": "가나",
+      "tanzania": "탄자니아"
+    },
+    "categories": {
+      "center": "센터",
+      "events": "행사",
+      "meetups": "밋업",
+      "mining": "마이닝",
+      "nodes": "노드",
+      "retail": "리테일",
+      "charity": "단체",
+      "lightning": "라이트닝"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
+    }
+  },
+  "globalNorthAmerica": {
+    "title": "북아메리카",
+    "description": "북아메리카의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+    "countriesTitle": "국가",
+    "countries": {
+      "usa": "미국",
+      "canada": "캐나다",
+      "mexico": "멕시코",
+      "el-salvador": "엘살바도르",
+      "costa-rica": "코스타리카"
+    },
+    "categories": {
+      "center": "센터",
+      "events": "행사",
+      "meetups": "밋업",
+      "mining": "마이닝",
+      "nodes": "노드",
+      "retail": "리테일",
+      "charity": "단체",
+      "lightning": "라이트닝"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
+    }
+  },
+  "globalSouthAmerica": {
+    "title": "남아메리카",
+    "description": "남아메리카의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+    "countriesTitle": "국가",
+    "countries": {
+      "brazil": "브라질",
+      "argentina": "아르헨티나",
+      "colombia": "콜롬비아",
+      "chile": "칠레",
+      "venezuela": "베네수엘라"
+    },
+    "categories": {
+      "center": "센터",
+      "events": "행사",
+      "meetups": "밋업",
+      "mining": "마이닝",
+      "nodes": "노드",
+      "retail": "리테일",
+      "charity": "단체",
+      "lightning": "라이트닝"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
+    }
+  },
+  "globalOceania": {
+    "title": "오세아니아",
+    "description": "오세아니아의 비트코인 단체들을 보여줍니다. 다양한 산업과 행사에 대해 알아보세요.",
+    "countriesTitle": "국가",
+    "countries": {
+      "australia": "호주",
+      "new-zealand": "뉴질랜드"
+    },
+    "categories": {
+      "center": "센터",
+      "events": "행사",
+      "meetups": "밋업",
+      "mining": "마이닝",
+      "nodes": "노드",
+      "retail": "리테일",
+      "charity": "단체",
+      "lightning": "라이트닝"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 국가의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
     }
   },
   "educationPage": {

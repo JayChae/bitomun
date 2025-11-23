@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { AsiaCountry, LocaleType } from "@/types";
+import { EuropeCountry, LocaleType } from "@/types";
 
 import {
   ContinentHeader,
@@ -9,10 +9,10 @@ import {
   ResourceList,
 } from "../../_components";
 import { categories } from "../../_constants";
-import { asiaResources } from "../_resources";
+import { europeResources } from "../_resources";
 
 type Props = {
-  params: Promise<{ locale: LocaleType; country: AsiaCountry }>;
+  params: Promise<{ locale: LocaleType; country: EuropeCountry }>;
 };
 
 export async function generateMetadata({ params }: Props) {
@@ -20,36 +20,36 @@ export async function generateMetadata({ params }: Props) {
   const t = await getTranslations({ locale, namespace: "Metadata.pages" });
 
   return {
-    title: t("globalAsia.title"),
-    description: t("globalAsia.description"),
+    title: t("globalEurope.title"),
+    description: t("globalEurope.description"),
   };
 }
 
 export async function generateStaticParams() {
-  const countries: AsiaCountry[] = [
-    "korea",
-    "japan",
-    "taiwan",
-    "indonesia",
-    "india",
+  const countries: EuropeCountry[] = [
+    "germany",
+    "switzerland",
+    "portugal",
+    "czech",
+    "uk",
   ];
   return countries.map((country) => ({ country }));
 }
 
-export default async function AsiaCountryPage({ params }: Props) {
+export default async function EuropeCountryPage({ params }: Props) {
   const { locale, country } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("globalAsia");
+  const t = await getTranslations("globalEurope");
 
-  const asiaCountries = [
-    { label: t("countries.korea"), value: "korea" as const },
-    { label: t("countries.japan"), value: "japan" as const },
-    { label: t("countries.taiwan"), value: "taiwan" as const },
-    { label: t("countries.indonesia"), value: "indonesia" as const },
-    { label: t("countries.india"), value: "india" as const },
+  const europeCountries = [
+    { label: t("countries.germany"), value: "germany" as const },
+    { label: t("countries.switzerland"), value: "switzerland" as const },
+    { label: t("countries.portugal"), value: "portugal" as const },
+    { label: t("countries.czech"), value: "czech" as const },
+    { label: t("countries.uk"), value: "uk" as const },
   ];
 
-  const countryData = asiaResources[locale][country];
+  const countryData = europeResources[locale][country];
 
   const categoryLabels = {
     center: t("categories.center"),
@@ -64,11 +64,11 @@ export default async function AsiaCountryPage({ params }: Props) {
 
   return (
     <div className="relative h-full">
-      <ContinentHeader title={t("title")} subtitle="Asia Region Resources" />
+      <ContinentHeader title={t("title")} subtitle="Europe Region Resources" />
       <div className="flex">
         <CountrySidebar
           title={t("countriesTitle")}
-          countries={asiaCountries}
+          countries={europeCountries}
           selectedCountry={country}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
@@ -79,7 +79,7 @@ export default async function AsiaCountryPage({ params }: Props) {
 
           <CountryHeader
             countryName={t(`countries.${country}`)}
-            countries={asiaCountries}
+            countries={europeCountries}
             selectPlaceholder={t("countriesTitle")}
           />
 
