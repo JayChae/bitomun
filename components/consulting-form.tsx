@@ -134,7 +134,12 @@ export function ConsultingForm() {
         </div>
       )}
 
-      <Button type="submit" className="w-full" size="lg" disabled={true}>
+      <Button
+        type="submit"
+        className="w-full"
+        size="lg"
+        disabled={true || isSubmitting}
+      >
         {t("submitButton")}
       </Button>
     </form>

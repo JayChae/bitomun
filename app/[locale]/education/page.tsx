@@ -80,6 +80,15 @@ export default async function EducationPage({ params }: Props) {
         t("levels.level3.targets.item6"),
       ],
     },
+    {
+      level: t("levels.level4.title"),
+      description: t("levels.level4.description"),
+      targets: [
+        t("levels.level4.targets.item1"),
+        t("levels.level4.targets.item2"),
+        t("levels.level4.targets.item3"),
+      ],
+    },
   ];
 
   const educationDevResources: Resource[] = [
@@ -180,6 +189,7 @@ export default async function EducationPage({ params }: Props) {
       />
 
       <Section
+        id="consulting"
         title={t("sections.consulting.title")}
         description={t("sections.consulting.description")}
         className="bg-gradient-to-r from-purple-500/10 to-transparent"
@@ -198,6 +208,7 @@ export default async function EducationPage({ params }: Props) {
 }
 
 type SectionProps = {
+  id?: string;
   title: string;
   description: string;
   className?: string;
@@ -206,6 +217,7 @@ type SectionProps = {
 };
 
 function Section({
+  id,
   title,
   description,
   className,
@@ -214,7 +226,7 @@ function Section({
 }: SectionProps) {
   const Icon = icon;
   return (
-    <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
+    <section id={id} className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex items-center justify-center gap-3">
@@ -296,7 +308,7 @@ type OffLineProps = {
 
 function OffLine({ levels, targetsLabel, applyLabel }: OffLineProps) {
   return (
-    <div className="grid w-full gap-6 md:grid-cols-3">
+    <div className="grid w-full max-w-4xl gap-6 md:grid-cols-2">
       {levels.map((levelData, index) => (
         <LevelCard
           key={index}

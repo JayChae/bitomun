@@ -1,21 +1,5 @@
-import { getTranslations } from "next-intl/server";
+import { redirect } from "next/navigation";
 
-import ComingSoon from "@/components/coming-soon";
-
-type Props = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata({ params }: Props) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
-
-  return {
-    title: t("globalOceania.title"),
-    description: t("globalOceania.description"),
-  };
-}
-
-export default async function OceaniaPage() {
-  return <ComingSoon />;
+export default function OceaniaPage() {
+  return redirect("/global/oceania/australia");
 }

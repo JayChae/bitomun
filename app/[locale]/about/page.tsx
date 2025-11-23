@@ -1,11 +1,12 @@
 import {
   Bitcoin,
-  BookOpen,
   Code2,
   GraduationCap,
+  MessageSquare,
   Users,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
@@ -54,15 +55,24 @@ export default async function AboutPage({ params }: Props) {
             {t("programs.title")}
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-            <div className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8">
+            <Link
+              href="/internship"
+              className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8"
+            >
               <div className="bg-primary/10 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full sm:mb-4 sm:h-12 sm:w-12 lg:h-14 lg:w-14">
                 <Code2 className="text-primary h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
               </div>
-              <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
+              <h3 className="mb-1 text-sm font-semibold text-white sm:mb-2 sm:text-base lg:text-lg">
                 {t("programs.internship")}
               </h3>
-            </div>
-            <div className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8">
+              <p className="text-xs text-gray-400 sm:text-sm">
+                {t("programs.internshipSubtitle")}
+              </p>
+            </Link>
+            <Link
+              href="/education"
+              className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8"
+            >
               <div className="bg-primary/10 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full sm:mb-4 sm:h-12 sm:w-12 lg:h-14 lg:w-14">
                 <GraduationCap className="text-primary h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
               </div>
@@ -72,23 +82,37 @@ export default async function AboutPage({ params }: Props) {
               <p className="text-xs text-gray-400 sm:text-sm">
                 {t("programs.educationLevel")}
               </p>
-            </div>
-            <div className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8">
+            </Link>
+            <Link
+              href="/education#consulting"
+              className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8"
+            >
               <div className="bg-primary/10 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full sm:mb-4 sm:h-12 sm:w-12 lg:h-14 lg:w-14">
-                <BookOpen className="text-primary h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
+                <MessageSquare className="text-primary h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
               </div>
-              <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
-                {t("programs.reading")}
+              <h3 className="mb-1 text-sm font-semibold text-white sm:mb-2 sm:text-base lg:text-lg">
+                {t("programs.consulting")}
               </h3>
-            </div>
-            <div className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8">
+              <p className="text-xs text-gray-400 sm:text-sm">
+                {t("programs.consultingSubtitle")}
+              </p>
+            </Link>
+            <Link
+              href="https://mini.bitcoinconf.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8"
+            >
               <div className="bg-primary/10 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full sm:mb-4 sm:h-12 sm:w-12 lg:h-14 lg:w-14">
                 <Users className="text-primary h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7" />
               </div>
-              <h3 className="text-sm font-semibold text-white sm:text-base lg:text-lg">
+              <h3 className="mb-1 text-sm font-semibold text-white sm:mb-2 sm:text-base lg:text-lg">
                 {t("programs.conference")}
               </h3>
-            </div>
+              <p className="text-xs text-gray-400 sm:text-sm">
+                {t("programs.conferenceSubtitle")}
+              </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -160,10 +184,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group hover:border-[#f7931a] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Bitcoin className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="bg-[#f7931a]/10 group-hover:bg-[#f7931a]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Bitcoin className="text-[#f7931a] h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.onchain")}
@@ -179,10 +203,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group hover:border-[#fbbf24] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Zap className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="bg-[#fbbf24]/10 group-hover:bg-[#fbbf24]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Zap className="text-[#fbbf24] h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.lightning")}

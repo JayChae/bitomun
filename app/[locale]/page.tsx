@@ -3,7 +3,6 @@ import {
   Bitcoin,
   BookOpen,
   BookText,
-  MapPin,
   User,
   Zap,
 } from "lucide-react";
@@ -11,6 +10,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
+import BackgroundDecoration from "@/components/ui/background-decoration";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,7 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import Logo from "@/components/ui/logo";
+import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -124,33 +124,37 @@ export default async function Home({ params }: Props) {
         description={t("global.description")}
         className="bg-gradient-to-r from-blue-500/10 to-transparent"
       >
-        <ul className="grid grid-cols-2 gap-4 md:grid-cols-3">
-          {CONTINENTS.map((continent) => {
-            return (
-              <li key={continent.id}>
-                <Link
-                  href={continent.link}
-                  locale={locale}
-                  className="group block h-full"
-                >
-                  <Card className="hover:border-primary/50 relative h-full w-full max-w-3xs overflow-hidden transition-all duration-300 hover:shadow-lg">
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                    />
-                    <CardHeader className="text-center">
-                      <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
-                        <MapPin className="text-primary size-6 sm:size-8 lg:size-10" />
-                      </div>
-                      <CardTitle className="text-sm sm:text-lg md:text-xl">
-                        {t(continent.title)}
-                      </CardTitle>
-                    </CardHeader>
-                  </Card>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+          {CONTINENTS.map((continent) => (
+            <Link
+              key={continent.id}
+              href={continent.link}
+              locale={locale}
+              className="group"
+            >
+              <div
+                className={cn(
+                  "border-border bg-card/50 relative h-full min-h-[160px] overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-500",
+                  "hover:scale-[1.02] hover:shadow-xl",
+                  continent.borderColor,
+                )}
+              >
+                <div
+                  className={cn(
+                    "absolute inset-0 bg-gradient-to-br transition-all duration-500",
+                    continent.gradient,
+                    continent.hoverGradient,
+                  )}
+                />
+                <div className="relative flex h-full flex-col items-center justify-center p-5">
+                  <h3 className="text-xl font-bold md:text-2xl">
+                    {t(continent.title)}
+                  </h3>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
         <div className="mt-12 flex justify-center">
           <ExploreAllButton href="/global" text={t("exploreAll")} />
         </div>
@@ -186,8 +190,12 @@ type HeroProps = {
 function Hero({ description, button1, button2 }: HeroProps) {
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
+      <BackgroundDecoration />
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="grid h-full items-center gap-8 py-12 lg:grid-cols-12">
+        <div className="relative mx-auto size-24 sm:size-32 md:size-40 lg:hidden">
+          <Logo alt="BITOMUN" fill className="object-contain drop-shadow-2xl" />
+        </div>
+        <div className="grid h-full items-center gap-8 py-8 lg:grid-cols-12 lg:py-12">
           {/* Left - Main Content */}
           <div className="space-y-10 lg:col-span-7">
             <div className="flex flex-col items-center justify-center gap-6 lg:items-start">
@@ -318,38 +326,56 @@ const CONTINENTS = [
   {
     id: "asia",
     title: "global.continents.asia",
-    color: "from-red-500/20 to-red-500/5",
     link: "/global/asia",
+    gradient: "from-rose-500/20 via-orange-500/20 to-amber-500/20",
+    hoverGradient:
+      "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
+    borderColor: "hover:border-orange-500/50",
   },
   {
     id: "europe",
     title: "global.continents.europe",
-    color: "from-blue-500/20 to-blue-500/5",
     link: "/global/europe",
+    gradient: "from-blue-500/20 via-indigo-500/20 to-violet-500/20",
+    hoverGradient:
+      "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
+    borderColor: "hover:border-blue-500/50",
   },
   {
     id: "africa",
     title: "global.continents.africa",
-    color: "from-yellow-500/20 to-yellow-500/5",
     link: "/global/africa",
+    gradient: "from-amber-500/20 via-yellow-500/20 to-lime-500/20",
+    hoverGradient:
+      "group-hover:from-amber-500/40 group-hover:via-yellow-500/40 group-hover:to-lime-500/40",
+    borderColor: "hover:border-yellow-500/50",
   },
   {
     id: "northAmerica",
     title: "global.continents.northAmerica",
-    color: "from-green-500/20 to-green-500/5",
     link: "/global/north-america",
+    gradient: "from-emerald-500/20 via-teal-500/20 to-cyan-500/20",
+    hoverGradient:
+      "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
+    borderColor: "hover:border-emerald-500/50",
   },
   {
     id: "southAmerica",
     title: "global.continents.southAmerica",
-    color: "from-purple-500/20 to-purple-500/5",
     link: "/global/south-america",
+    gradient: "from-green-500/20 via-emerald-500/20 to-teal-500/20",
+    hoverGradient:
+      "group-hover:from-green-500/40 group-hover:via-emerald-500/40 group-hover:to-teal-500/40",
+    borderColor: "hover:border-green-500/50",
   },
   {
     id: "oceania",
     title: "global.continents.oceania",
-    color: "from-teal-500/20 to-teal-500/5",
     link: "/global/oceania",
+    gradient: "from-cyan-500/20 via-sky-500/20 to-blue-500/20",
+    hoverGradient:
+      "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
+    borderColor: "hover:border-cyan-500/50",
   },
 ] as const;
 

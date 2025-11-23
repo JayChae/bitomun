@@ -13,6 +13,8 @@ import IntroSection from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types";
 
+import InternshipForm from "./_components/internship-form";
+
 type Props = {
   params: Promise<{ locale: LocaleType }>;
 };
@@ -112,6 +114,13 @@ export default async function InternshipPage({ params }: Props) {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="container mx-auto max-w-2xl">
+          <InternshipForm />
         </div>
       </section>
 
