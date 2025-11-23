@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 import { getPathname } from "@/i18n/navigation";
 
-const host = "";
+const host = "https://www.bitomun.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
