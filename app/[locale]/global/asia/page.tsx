@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function AsiaPage() {
-  return redirect("/global/asia/japan");
+  return redirect("/global/asia/korea");
 }
