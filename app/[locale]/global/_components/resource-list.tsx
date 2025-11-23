@@ -11,6 +11,7 @@ type ResourceListProps = {
     title: string;
     description: string;
   };
+  comingSoonText: string;
   theme: ContinentColorTheme;
 };
 
@@ -19,6 +20,7 @@ export function ResourceList({
   categories,
   categoryLabels,
   emptyState,
+  comingSoonText,
   theme,
 }: ResourceListProps) {
   const hasResources = categories.some(
@@ -53,7 +55,7 @@ export function ResourceList({
     <div className="mb-12 space-y-16">
       {categories.map((category, index) => {
         const resources = countryData[category];
-        if (!resources || resources.length === 0) return null;
+        const isEmpty = !resources || resources.length === 0;
 
         return (
           <div key={category} className="relative">
@@ -67,26 +69,29 @@ export function ResourceList({
               </h3>
             </div>
 
-            {/* 카드 그리드 */}
-            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
-              {resources.map((resource, resourceIndex) => (
-                <li
-                  key={resource.name}
-                  className="h-full"
-                  style={{
-                    animationDelay: `${resourceIndex * 100}ms`,
-                  }}
-                >
-                  <ResourceCard
-                    href={resource.url}
-                    logo={resource.logo}
-                    name={resource.name}
-                    description={resource.description}
-                    theme={theme}
-                  />
-                </li>
-              ))}
-            </ul>
+            {isEmpty ? (
+              <p className="text-muted-foreground text-sm">{comingSoonText}</p>
+            ) : (
+              <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-8">
+                {resources.map((resource, resourceIndex) => (
+                  <li
+                    key={resource.name}
+                    className="h-full"
+                    style={{
+                      animationDelay: `${resourceIndex * 100}ms`,
+                    }}
+                  >
+                    <ResourceCard
+                      href={resource.url}
+                      logo={resource.logo}
+                      name={resource.name}
+                      description={resource.description}
+                      theme={theme}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         );
       })}

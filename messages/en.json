@@ -509,157 +509,85 @@
     },
     "exploreAll": "Explore All"
   },
+  "globalCommon": {
+    "countriesTitle": "Countries",
+    "categories": {
+      "center": "Center",
+      "events": "Events",
+      "meetups": "Meetups",
+      "mining": "Mining",
+      "nodes": "Nodes",
+      "retail": "Retail",
+      "charity": "Charity & Bodies",
+      "lightning": "Lightning"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this country are being prepared. Check back soon!"
+    },
+    "comingSoon": "Coming Soon"
+  },
   "globalAsia": {
     "title": "Asia",
     "description": "Discover Bitcoin organizations across Asia. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "japan": "Japan",
       "korea": "Korea",
       "taiwan": "Taiwan",
       "indonesia": "Indonesia",
       "india": "India"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "globalEurope": {
     "title": "Europe",
     "description": "Discover Bitcoin organizations across Europe. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "germany": "Germany",
       "switzerland": "Switzerland",
       "portugal": "Portugal",
       "czech": "Czech Republic",
       "uk": "United Kingdom"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "globalAfrica": {
     "title": "Africa",
     "description": "Discover Bitcoin organizations across Africa. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "south-africa": "South Africa",
       "nigeria": "Nigeria",
       "kenya": "Kenya",
       "ghana": "Ghana",
       "tanzania": "Tanzania"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "globalNorthAmerica": {
     "title": "North America",
     "description": "Discover Bitcoin organizations across North America. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "usa": "United States",
       "canada": "Canada",
       "mexico": "Mexico",
       "el-salvador": "El Salvador",
       "costa-rica": "Costa Rica"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "globalSouthAmerica": {
     "title": "South America",
     "description": "Discover Bitcoin organizations across South America. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "brazil": "Brazil",
       "argentina": "Argentina",
       "colombia": "Colombia",
       "chile": "Chile",
       "venezuela": "Venezuela"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "globalOceania": {
     "title": "Oceania",
     "description": "Discover Bitcoin organizations across Oceania. Learn about various industries and events.",
-    "countriesTitle": "Countries",
     "countries": {
       "australia": "Australia",
       "new-zealand": "New Zealand"
-    },
-    "categories": {
-      "center": "Center",
-      "events": "Events",
-      "meetups": "Meetups",
-      "mining": "Mining",
-      "nodes": "Nodes",
-      "retail": "Retail",
-      "charity": "Charity & Bodies",
-      "lightning": "Lightning"
-    },
-    "emptyState": {
-      "title": "Coming Soon",
-      "description": "Resources for this country are being prepared. Check back soon!"
     }
   },
   "educationPage": {

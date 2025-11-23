@@ -37,6 +37,7 @@ export default async function OceaniaCountryPage({ params }: Props) {
   const { locale, country } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("globalOceania");
+  const common = await getTranslations("globalCommon");
 
   const oceaniaCountries = [
     { label: t("countries.australia"), value: "australia" as const },
@@ -46,14 +47,14 @@ export default async function OceaniaCountryPage({ params }: Props) {
   const countryData = oceaniaResources[locale][country];
 
   const categoryLabels = {
-    center: t("categories.center"),
-    events: t("categories.events"),
-    meetups: t("categories.meetups"),
-    mining: t("categories.mining"),
-    nodes: t("categories.nodes"),
-    retail: t("categories.retail"),
-    charity: t("categories.charity"),
-    lightning: t("categories.lightning"),
+    center: common("categories.center"),
+    events: common("categories.events"),
+    meetups: common("categories.meetups"),
+    mining: common("categories.mining"),
+    nodes: common("categories.nodes"),
+    retail: common("categories.retail"),
+    charity: common("categories.charity"),
+    lightning: common("categories.lightning"),
   };
 
   const theme = continentColors.oceania;
@@ -63,7 +64,7 @@ export default async function OceaniaCountryPage({ params }: Props) {
       <ContinentHeader title={t("title")} subtitle="Oceania Region Resources" theme={theme} />
       <div className="flex">
         <CountrySidebar
-          title={t("countriesTitle")}
+          title={common("countriesTitle")}
           countries={oceaniaCountries}
           selectedCountry={country}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
@@ -76,7 +77,7 @@ export default async function OceaniaCountryPage({ params }: Props) {
           <CountryHeader
             countryName={t(`countries.${country}`)}
             countries={oceaniaCountries}
-            selectPlaceholder={t("countriesTitle")}
+            selectPlaceholder={common("countriesTitle")}
             theme={theme}
           />
 
@@ -85,9 +86,10 @@ export default async function OceaniaCountryPage({ params }: Props) {
             categories={categories}
             categoryLabels={categoryLabels}
             emptyState={{
-              title: t("emptyState.title"),
-              description: t("emptyState.description"),
+              title: common("emptyState.title"),
+              description: common("emptyState.description"),
             }}
+            comingSoonText={common("comingSoon")}
             theme={theme}
           />
         </section>
