@@ -34,12 +34,14 @@ export function ResourceCard({
       className="group relative block h-full"
     >
       <Card
-        className={`relative h-full overflow-hidden rounded-3xl border-0 bg-white shadow-lg transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl dark:bg-gray-900`}
+        className={`relative h-full overflow-hidden rounded-3xl border-0 bg-gray-950/80 ring-1 ring-white/10 transition-all duration-500 group-hover:-translate-y-1 group-hover:ring-white/20`}
       >
         {/* 이미지 영역 - 크게 확대 */}
         <div
-          className={`relative h-40 overflow-hidden bg-gradient-to-br ${theme.cardBar}`}
+          className={`relative h-40 overflow-hidden bg-gradient-to-br ${theme.cardBar} opacity-90`}
         >
+          {/* 어두운 오버레이 */}
+          <div className="absolute inset-0 bg-black/30" />
           {/* 로고 이미지 - 크고 중앙 배치 */}
           <div className="absolute inset-0 flex items-center justify-center p-6">
             <div className="relative size-32 overflow-hidden rounded-2xl transition-all duration-500 group-hover:scale-110 sm:size-28">
@@ -64,13 +66,13 @@ export function ResourceCard({
         <CardHeader className="relative space-y-2 p-5">
           {/* 제목 */}
           <CardTitle
-            className={`text-lg font-bold text-gray-900 transition-colors duration-300 ${theme.cardTitleHover} dark:text-gray-100`}
+            className={`text-lg font-bold text-gray-100 transition-colors duration-300 ${theme.cardTitleHover}`}
           >
             {name}
           </CardTitle>
 
           {/* 설명 */}
-          <CardDescription className="line-clamp-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+          <CardDescription className="line-clamp-2 text-sm leading-relaxed text-gray-400">
             {description}
           </CardDescription>
 
