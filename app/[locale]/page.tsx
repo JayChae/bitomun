@@ -19,6 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -190,7 +191,10 @@ function Hero({ description, button1, button2 }: HeroProps) {
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
       <BackgroundDecoration />
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="grid h-full items-center gap-8 py-12 lg:grid-cols-12">
+        <div className="relative mx-auto size-24 sm:size-32 md:size-40 lg:hidden">
+          <Logo alt="BITOMUN" fill className="object-contain drop-shadow-2xl" />
+        </div>
+        <div className="grid h-full items-center gap-8 py-8 lg:grid-cols-12 lg:py-12">
           {/* Left - Main Content */}
           <div className="space-y-10 lg:col-span-7">
             <div className="flex flex-col items-center justify-center gap-6 lg:items-start">

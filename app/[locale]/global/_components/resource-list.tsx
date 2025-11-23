@@ -1,3 +1,5 @@
+import { Inbox } from "lucide-react";
+
 import { CountryResources, OrganizationCategory } from "@/types";
 
 import { ContinentColorTheme } from "../_constants";
@@ -29,24 +31,18 @@ export function ResourceList({
 
   if (!hasResources) {
     return (
-      <div className="text-muted-foreground flex flex-col items-center justify-center py-20 text-center">
-        <div className="mb-6 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 p-6 dark:from-gray-800 dark:to-gray-700">
-          <svg
-            className="h-12 w-12 text-gray-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
-            />
-          </svg>
+      <div className="flex flex-col items-center justify-center py-16 text-center">
+        <div
+          className={`mb-5 flex size-16 items-center justify-center rounded-2xl bg-gradient-to-br ${theme.iconGradient} shadow-lg ${theme.iconShadow}`}
+        >
+          <Inbox className="size-8 text-white" strokeWidth={1.5} />
         </div>
-        <h3 className="mb-2 text-xl font-semibold">{emptyState.title}</h3>
-        <p className="max-w-sm">{emptyState.description}</p>
+        <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
+          {emptyState.title}
+        </h3>
+        <p className="max-w-sm text-sm text-gray-500 dark:text-gray-400">
+          {emptyState.description}
+        </p>
       </div>
     );
   }
