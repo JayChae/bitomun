@@ -45,10 +45,10 @@ export default async function Layer1Page({ params }: Props) {
       label: t(categoryTitles["apis-payments"]),
       value: "apis-payments",
     },
-    {
-      label: t(categoryTitles["l2s-smart-contracts"]),
-      value: "l2s-smart-contracts",
-    },
+    // {
+    //   label: t(categoryTitles["l2s-smart-contracts"]),
+    //   value: "l2s-smart-contracts",
+    // },
     {
       label: t(categoryTitles["node-software"]),
       value: "node-software",

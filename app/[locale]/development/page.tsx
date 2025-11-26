@@ -5,7 +5,7 @@ import {
   Building2,
   ChartNetwork,
   CodeXml,
-  Layers2,
+  FlaskConical,
   LucideIcon,
   Pickaxe,
   Route,
@@ -77,10 +77,10 @@ export default async function DevelopmentPage({ params }: Props) {
       link: "/development/layer1/utilities",
     },
     {
-      title: t("resources.layer1.items.layer2s.title"),
-      description: t("resources.layer1.items.layer2s.description"),
-      icon: Layers2,
-      link: "/development/layer1/l2s-smart-contracts",
+      title: t("resources.layer1.items.research.title"),
+      description: t("resources.layer1.items.research.description"),
+      icon: FlaskConical,
+      link: "/development/layer1/research",
     },
   ];
 

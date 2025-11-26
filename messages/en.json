@@ -164,9 +164,9 @@
             "title": "Utilities",
             "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification"
           },
-          "layer2s": {
-            "title": "Layer 2s",
-            "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network"
+          "research": {
+            "title": "Research",
+            "description": "Explore academic papers, technical research, and whitepapers related to Bitcoin"
           }
         }
       },
