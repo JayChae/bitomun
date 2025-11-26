@@ -41,7 +41,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
             locale={locale}
           >
             <Logo width={42} height={42} />
-            <span className="block text-3xl font-bold sm:hidden md:block">
+            <span className="-ml-2 block text-3xl font-bold sm:hidden md:block">
               itomun
             </span>
           </Link>
