@@ -69,8 +69,8 @@ export default async function SupportModal({
           <Image
             src={ADDRESS_QR}
             alt="Onchain QR Code"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             className="mx-auto"
           />
 
