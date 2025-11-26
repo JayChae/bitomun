@@ -414,7 +414,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "비트코인 생태계에 참여하세요"
+      "description": "비트코인 네트워크에 참여할 수 있도록 다양한 프로그램에 신청하세요. 인턴십, 펀딩 신청 그 외에 다양한 제안서를 보내세요"
     },
     "categories": {
       "internship": {
@@ -473,7 +473,7 @@
     }
   },
   "global": {
-    "title": "글로벌 커뮤니티",
+    "title": "Global Communities",
     "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요. 전 세계 비트코이너들과 연결하고 지역 밋업, 교육 이니셔티브, 개발 허브를 발견하세요",
     "continentLinks": {
       "asia": "아시아",
