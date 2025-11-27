@@ -8,72 +8,76 @@
         "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin We also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry"
       },
       "about": {
-        "title": "About Us | Bitomun",
+        "title": "About Us",
         "description": "Learn about Bitomun's mission to advance Bitcoin development worldwide through education programs, internships, and community support"
       },
       "development": {
-        "title": "Development Resources | Bitomun",
+        "title": "Development Resources",
         "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem"
       },
       "developmentLayer1": {
-        "title": "Layer1 | Bitomun",
+        "title": "Layer1",
         "description": "Comprehensive tools and libraries for Layer1 development including libraries, APIs, utilities, and SDKs"
       },
       "developmentLayer2": {
-        "title": "Layer2 | Bitomun",
+        "title": "Layer2",
         "description": "Comprehensive tools and libraries for Layer2 development including Lightning Network resources"
       },
       "developmentEducation": {
-        "title": "Development Education | Bitomun",
+        "title": "Development Education",
         "description": "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development"
       },
       "education": {
-        "title": "Education | Bitomun",
+        "title": "Education",
         "description": "Learn the philosophy and technology behind Bitcoin through resources designed for everyone from beginners to developers"
       },
       "global": {
-        "title": "Global Communities | Bitomun",
+        "title": "Global Communities",
         "description": "Explore Bitcoin centers, organizations, and communities across all continents"
       },
       "globalAsia": {
-        "title": "Asia | Bitomun",
+        "title": "Asia",
         "description": "Discover Bitcoin centers, organizations, and communities across Asia"
       },
       "globalEurope": {
-        "title": "Europe | Bitomun",
+        "title": "Europe",
         "description": "Discover Bitcoin centers, organizations, and communities across Europe"
       },
       "globalAfrica": {
-        "title": "Africa | Bitomun",
+        "title": "Africa",
         "description": "Discover Bitcoin centers, organizations, and communities across Africa"
       },
       "globalNorthAmerica": {
-        "title": "North America | Bitomun",
+        "title": "North America",
         "description": "Discover Bitcoin centers, organizations, and communities across North America"
       },
       "globalSouthAmerica": {
-        "title": "South America | Bitomun",
+        "title": "South America",
         "description": "Discover Bitcoin centers, organizations, and communities across South America"
       },
       "globalOceania": {
-        "title": "Oceania | Bitomun",
+        "title": "Oceania",
         "description": "Discover Bitcoin centers, organizations, and communities across Oceania"
       },
       "internship": {
-        "title": "Internship Program | Bitomun",
+        "title": "Internship Program",
         "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship"
       },
       "apply": {
-        "title": "Apply | Bitomun",
+        "title": "Apply",
         "description": "Join the Bitcoin ecosystem"
       },
       "sponsorship": {
-        "title": "Sponsorship | Bitomun",
+        "title": "Sponsorship",
         "description": "Support Bitcoin education projects and grow together"
       },
       "other": {
-        "title": "Other Inquiries | Bitomun",
+        "title": "Other Inquiries",
         "description": "Send us your collaboration ideas, proposals, or questions"
+      },
+      "support": {
+        "title": "Support Us",
+        "description": "Support Bitomun directly to help spread Bitcoin education and development"
       }
     }
   },
