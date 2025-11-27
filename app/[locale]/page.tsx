@@ -2,9 +2,10 @@ import {
   ArrowRight,
   Bitcoin,
   BookOpen,
-  BookText,
   Mail,
-  User,
+  Monitor,
+  School,
+  Users,
   Zap,
 } from "lucide-react";
 import Image from "next/image";
@@ -51,7 +52,6 @@ export default async function Home({ params }: Props) {
       <Hero
         description={t("hero.description")}
         button1={t("hero.button1")}
-        button2={t("hero.button2")}
         subscribeButton={tSubscribe("button")}
       />
 
@@ -188,11 +188,11 @@ export default async function Home({ params }: Props) {
 type HeroProps = {
   description: string;
   button1: string;
-  button2: string;
+  button2?: string;
   subscribeButton: string;
 };
 
-function Hero({ description, button1, button2, subscribeButton }: HeroProps) {
+function Hero({ description, button1, subscribeButton }: HeroProps) {
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
       <BackgroundDecoration />
@@ -393,24 +393,24 @@ const CONTINENTS = [
 
 const EDUCATION_RESOURCES = [
   {
-    id: "educators",
-    icon: User,
-    title: "education.resources.educators.title",
-    description: "education.resources.educators.description",
-    link: "/education/educators",
+    id: "offline",
+    icon: School,
+    title: "education.resources.offline.title",
+    description: "education.resources.offline.description",
+    link: "/education#offline",
   },
   {
-    id: "books",
-    icon: BookOpen,
-    title: "education.resources.books.title",
-    description: "education.resources.books.description",
-    link: "/education/books",
+    id: "online",
+    icon: Monitor,
+    title: "education.resources.online.title",
+    description: "education.resources.online.description",
+    link: "/education#online",
   },
   {
-    id: "materials",
-    icon: BookText,
-    title: "education.resources.materials.title",
-    description: "education.resources.materials.description",
-    link: "/education/materials",
+    id: "bookclub",
+    icon: Users,
+    title: "education.resources.bookclub.title",
+    description: "education.resources.bookclub.description",
+    link: "/education#bookclub",
   },
 ] as const;

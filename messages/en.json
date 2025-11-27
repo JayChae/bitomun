@@ -106,17 +106,17 @@
       "title": "Bitcoin Education",
       "description": "Learn the philosophy and technology behind Bitcoin Explore its fundamentals and mechanics through resources designed for everyone from beginners to developers",
       "resources": {
-        "educators": {
-          "title": "Educators",
-          "description": "Discover leading Bitcoin educators and experts Gain deeper insights through their courses, talks, and educational content"
+        "offline": {
+          "title": "Offline Education",
+          "description": "Learn Bitcoin through in-person communication with experts"
         },
-        "books": {
-          "title": "Books",
-          "description": "From essential reading for newcomers to advanced technical books explore a curated selection to understand Bitcoin in depth"
+        "online": {
+          "title": "Online Education",
+          "description": "We offer online education where you can learn various Bitcoin courses at your desired time and place"
         },
-        "materials": {
-          "title": "Learning Materials",
-          "description": "Access tutorials, guides, and video lessons that help you learn and practice Bitcoin at your own pace"
+        "bookclub": {
+          "title": "Bitcoin Reading Club",
+          "description": "We gather to discuss Bitcoin-related books that accurately explain Bitcoin"
         }
       }
     },
