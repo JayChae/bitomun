@@ -1,13 +1,15 @@
 "use client";
 
-import { Languages, Menu, X } from "lucide-react";
+import { Languages, Mail, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LanguageType, LocaleType } from "@/types/intl";
 
+import SubscribeModal from "./subscribe-modal";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -27,6 +29,7 @@ const links = [
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
   const withoutLocale = pathname.split("/").slice(2).join("/");
+  const t = useTranslations("subscribe");
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -40,13 +43,11 @@ export default function Header({ locale }: { locale: LocaleType }) {
             locale={locale}
           >
             <Logo width={42} height={42} />
-            <span className="-ml-2 block text-3xl font-bold sm:hidden md:block">
-              itomun
-            </span>
+            <span className="-ml-2 block text-3xl font-bold">itomun</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden items-center gap-6 sm:flex">
+          <ul className="hidden items-center gap-6 lg:flex">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -78,6 +79,17 @@ export default function Header({ locale }: { locale: LocaleType }) {
               >
                 Mini Conference
               </Link>
+            </li>
+            <li>
+              <SubscribeModal>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="text-muted-foreground"
+                >
+                  {t("button")}
+                </Button>
+              </SubscribeModal>
             </li>
             <li>
               <DropdownMenu modal={false}>
@@ -112,7 +124,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
           <Button
             variant="ghost"
             size="icon"
-            className="text-muted-foreground sm:hidden"
+            className="text-muted-foreground lg:hidden"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
           >
             {mobileMenuOpen ? (
@@ -154,6 +166,16 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 </li>
               ))}
               <li className="border-border w-full border-t pt-4">
+                <div className="px-4 pb-3">
+                  <SubscribeModal>
+                    <Button variant="outline" size="sm" className="w-full">
+                      <Mail className="mr-1 h-4 w-4" />
+                      {t("button")}
+                    </Button>
+                  </SubscribeModal>
+                </div>
+              </li>
+              <li>
                 <Link
                   href={`/${withoutLocale}`}
                   locale={locale === "en" ? "ko" : "en"}

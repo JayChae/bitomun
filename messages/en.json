@@ -703,5 +703,19 @@
         "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references."
       }
     }
+  },
+  "subscribe": {
+    "button": "Subscribe",
+    "title": "Subscribe to Bitomun Newsletter",
+    "description": "Get the latest updates on Bitcoin development, education, and community",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com"
+    },
+    "submit": "Subscribe",
+    "submitting": "Submitting...",
+    "success": "Thank you for subscribing!"
   }
 }

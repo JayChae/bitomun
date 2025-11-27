@@ -592,6 +592,20 @@
       "new-zealand": "뉴질랜드"
     }
   },
+  "subscribe": {
+    "button": "구독하기",
+    "title": "Bitomun 뉴스레터 구독",
+    "description": "비트코인 개발, 교육, 커뮤니티에 관한 최신 소식을 받아보세요",
+    "fields": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "email": "이메일",
+      "emailPlaceholder": "example@email.com"
+    },
+    "submit": "구독하기",
+    "submitting": "전송 중...",
+    "success": "구독해 주셔서 감사합니다!"
+  },
   "educationPage": {
     "hero": {
       "title": "Education",
