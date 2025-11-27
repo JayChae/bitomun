@@ -2,14 +2,17 @@ import {
   ArrowRight,
   Bitcoin,
   BookOpen,
-  BookText,
-  User,
+  Mail,
+  Monitor,
+  School,
+  Users,
   Zap,
 } from "lucide-react";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
+import SubscribeModal from "@/components/subscribe-modal";
 import BackgroundDecoration from "@/components/ui/background-decoration";
 import { Button } from "@/components/ui/button";
 import {
@@ -43,12 +46,13 @@ export default async function Home({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
   const t = await getTranslations("landing");
+  const tSubscribe = await getTranslations("subscribe");
   return (
     <div className="relative">
       <Hero
         description={t("hero.description")}
         button1={t("hero.button1")}
-        button2={t("hero.button2")}
+        subscribeButton={tSubscribe("button")}
       />
 
       {/* Development Resources Section */}
@@ -184,10 +188,11 @@ export default async function Home({ params }: Props) {
 type HeroProps = {
   description: string;
   button1: string;
-  button2: string;
+  button2?: string;
+  subscribeButton: string;
 };
 
-function Hero({ description, button1, button2 }: HeroProps) {
+function Hero({ description, button1, subscribeButton }: HeroProps) {
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
       <BackgroundDecoration />
@@ -218,12 +223,19 @@ function Hero({ description, button1, button2 }: HeroProps) {
               <Link href="/about">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  variant="outline"
+                  className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
                 >
                   {button1}
                 </Button>
               </Link>
-              <ExploreAllButton href="/development" text={button2} />
+              {/* <ExploreAllButton href="/development" text={button2} /> */}
+              <SubscribeModal>
+                <Button size="lg">
+                  <Mail className="mr-1 h-4 w-4" />
+                  {subscribeButton}
+                </Button>
+              </SubscribeModal>
             </div>
           </div>
 
@@ -381,24 +393,24 @@ const CONTINENTS = [
 
 const EDUCATION_RESOURCES = [
   {
-    id: "educators",
-    icon: User,
-    title: "education.resources.educators.title",
-    description: "education.resources.educators.description",
-    link: "/education/educators",
+    id: "offline",
+    icon: School,
+    title: "education.resources.offline.title",
+    description: "education.resources.offline.description",
+    link: "/education#offline",
   },
   {
-    id: "books",
-    icon: BookOpen,
-    title: "education.resources.books.title",
-    description: "education.resources.books.description",
-    link: "/education/books",
+    id: "online",
+    icon: Monitor,
+    title: "education.resources.online.title",
+    description: "education.resources.online.description",
+    link: "/education#online",
   },
   {
-    id: "materials",
-    icon: BookText,
-    title: "education.resources.materials.title",
-    description: "education.resources.materials.description",
-    link: "/education/materials",
+    id: "bookclub",
+    icon: Users,
+    title: "education.resources.bookclub.title",
+    description: "education.resources.bookclub.description",
+    link: "/education#bookclub",
   },
 ] as const;

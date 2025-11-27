@@ -12,6 +12,7 @@ import {
   OrganizationJsonLd,
   WebsiteJsonLd,
 } from "@/components/json-ld";
+import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 
 import Header from "../../components/header";
@@ -47,6 +48,7 @@ export default async function Layout({
         className={`relative size-full antialiased ${pretendardFont.className} overflow-y-scroll`}
       >
         <NextIntlClientProvider locale={locale}>
+          <Toaster position="top-center" />
           <Header locale={locale} />
           <main className="min-h-full min-w-full pt-16">{children}</main>
           <Footer />

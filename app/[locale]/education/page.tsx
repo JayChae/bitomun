@@ -131,6 +131,7 @@ export default async function EducationPage({ params }: Props) {
         </div>
       </IntroSection>
       <Section
+        id="offline"
         title={t("sections.offline.title")}
         description={t("sections.offline.description")}
         className="from-secondary/10 bg-gradient-to-r to-transparent"
@@ -144,6 +145,7 @@ export default async function EducationPage({ params }: Props) {
       </Section>
 
       <Section
+        id="online"
         title={t("sections.online.title")}
         description={t("sections.online.description")}
         className="bg-gradient-to-l from-blue-500/10 to-transparent"
@@ -162,6 +164,7 @@ export default async function EducationPage({ params }: Props) {
       </Section>
 
       <Section
+        id="bookclub"
         title={t("sections.bookClub.title")}
         description={t("sections.bookClub.description")}
         className="bg-gradient-to-r from-amber-500/10 to-transparent"

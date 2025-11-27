@@ -134,7 +134,7 @@ export default async function InternshipPage({ params }: Props) {
             {t("stayConnected.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/centers" locale={locale}>
+            <Link href="/global" locale={locale}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"

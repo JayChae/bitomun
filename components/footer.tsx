@@ -19,8 +19,14 @@ async function Footer() {
           </a>
         </div> */}
 
-        <Link href="/apply/sponsorship" className="hover:text-primary">
-          {t("support.title")}
+        <Link
+          href="/support"
+          className="group hover:text-primary hover:bg-primary relative overflow-hidden rounded-full px-6 py-3 font-bold"
+        >
+          <span className="relative z-10 group-hover:text-white hover:text-white">
+            {t("support.title")}
+          </span>
+          <span className="animate-shimmer absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent hover:bg-transparent"></span>
         </Link>
 
         <p className="text-center">

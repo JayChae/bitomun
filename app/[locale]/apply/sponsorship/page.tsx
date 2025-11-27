@@ -48,7 +48,7 @@ export default async function SponsorshipPage({ params }: Props) {
       <section className="container mx-auto px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <Button variant="ghost" asChild className="mb-8">
-            <Link href="/apply">{t("common.back")}</Link>
+            <Link href="/support">{t("common.back")}</Link>
           </Button>
           <SponsorshipForm />
         </div>
@@ -57,13 +57,15 @@ export default async function SponsorshipPage({ params }: Props) {
       {/* Support Section */}
       <section className="container mx-auto px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl font-black mb-4">{t("support.title")}</h2>
-          <p className="text-muted-foreground mb-8">{t("support.description")}</p>
+          <h2 className="mb-4 text-2xl font-black">{t("support.title")}</h2>
+          <p className="text-muted-foreground mb-8">
+            {t("support.description")}
+          </p>
           <div className="flex justify-center gap-4">
             <SupportModal
               type="onchain"
               trigger={
-                <button className="group flex items-center gap-2 border-2 border-border hover:border-[#f7931a] bg-card px-6 py-3 font-bold transition-all">
+                <button className="group border-border bg-card flex items-center gap-2 border-2 px-6 py-3 font-bold transition-all hover:border-[#f7931a]">
                   <Bitcoin className="h-5 w-5 text-[#f7931a]" />
                   {t("support.onchain")}
                 </button>
@@ -72,7 +74,7 @@ export default async function SponsorshipPage({ params }: Props) {
             <SupportModal
               type="lightning"
               trigger={
-                <button className="group flex items-center gap-2 border-2 border-border hover:border-[#fbbf24] bg-card px-6 py-3 font-bold transition-all">
+                <button className="group border-border bg-card flex items-center gap-2 border-2 px-6 py-3 font-bold transition-all hover:border-[#fbbf24]">
                   <Zap className="h-5 w-5 text-[#fbbf24]" />
                   {t("support.lightning")}
                 </button>

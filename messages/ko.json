@@ -107,17 +107,17 @@
       "title": "비트코인 교육",
       "description": "비트코인의 철학과 기술을 깊이 있게 배우세요 초보자부터 개발자까지, 누구나 이해할 수 있는 강의와 자료를 통해 비트코인의 원리를 탐구할 수 있습니다",
       "resources": {
-        "educators": {
-          "title": "교육자들",
-          "description": "비트코인 전문가와 교육자들을 만나보세요 그들의 강의와 콘텐츠를 통해 더 깊은 통찰을 얻을 수 있습니다"
+        "offline": {
+          "title": "오프라인 교육",
+          "description": "전문가와 오프라인에서 소통하며 비트코인을 배울 수 있습니다"
         },
-        "books": {
-          "title": "서적",
-          "description": "비트코인을 이해하기 위한 필독서부터 심화 기술서까지 다양한 책을 통해 비트코인의 세계를 체계적으로 배워보세요"
+        "online": {
+          "title": "온라인 교육",
+          "description": "다양한 비트코인 교육을 원하는 장소와 시간에 들을 수 있는 온라인 교육을 제공합니다"
         },
-        "materials": {
-          "title": "학습 자료",
-          "description": "튜토리얼, 가이드, 비디오 강의 등 다양한 형식의 학습 자료를 통해 스스로 비트코인을 배우고 실습해보세요"
+        "bookclub": {
+          "title": "비트코인 독서 모임",
+          "description": "비트코인에 대해 올바르게 설명하는 서적을 읽는 독서 모임입니다"
         }
       }
     },
@@ -165,9 +165,9 @@
             "title": "유틸리티",
             "description": "트랜잭션 시뮬레이션, 스크립트 탐색, 블록체인 시각화, 코드 무결성 검증 등 다양한 도구 모음입니다"
           },
-          "layer2s": {
-            "title": "레이어 2",
-            "description": "비트코인 네트워크 위에서 스마트 컨트랙트와 세컨드 레이어 솔루션과 같은 확장된 기능을 가능하게 하는 기술입니다"
+          "research": {
+            "title": "연구 자료",
+            "description": "비트코인과 관련된 논문, 기술 연구, 백서 등을 탐색하세요"
           }
         }
       },
@@ -414,7 +414,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "비트코인 생태계에 참여하세요"
+      "description": "비트코인 네트워크에 참여할 수 있도록 다양한 프로그램에 신청하세요. 인턴십, 펀딩 신청 그 외에 다양한 제안서를 보내세요"
     },
     "categories": {
       "internship": {
@@ -473,7 +473,7 @@
     }
   },
   "global": {
-    "title": "글로벌 커뮤니티",
+    "title": "Global Communities",
     "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요. 전 세계 비트코이너들과 연결하고 지역 밋업, 교육 이니셔티브, 개발 허브를 발견하세요",
     "continentLinks": {
       "asia": "아시아",
@@ -591,6 +591,21 @@
       "australia": "호주",
       "new-zealand": "뉴질랜드"
     }
+  },
+  "subscribe": {
+    "button": "구독하기",
+    "title": "Bitomun 구독",
+    "description": "비트코인 개발, 교육, 커뮤니티에 관한 최신 소식을 받아보세요",
+    "fields": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "email": "이메일",
+      "emailPlaceholder": "example@email.com"
+    },
+    "submit": "구독하기",
+    "submitting": "전송 중...",
+    "success": "구독이 완료되었습니다.",
+    "error": "구독 신청에 실패했습니다. 다시 시도해주세요."
   },
   "educationPage": {
     "hero": {

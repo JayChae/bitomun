@@ -106,17 +106,17 @@
       "title": "Bitcoin Education",
       "description": "Learn the philosophy and technology behind Bitcoin Explore its fundamentals and mechanics through resources designed for everyone from beginners to developers",
       "resources": {
-        "educators": {
-          "title": "Educators",
-          "description": "Discover leading Bitcoin educators and experts Gain deeper insights through their courses, talks, and educational content"
+        "offline": {
+          "title": "Offline Education",
+          "description": "Learn Bitcoin through in-person communication with experts"
         },
-        "books": {
-          "title": "Books",
-          "description": "From essential reading for newcomers to advanced technical books explore a curated selection to understand Bitcoin in depth"
+        "online": {
+          "title": "Online Education",
+          "description": "We offer online education where you can learn various Bitcoin courses at your desired time and place"
         },
-        "materials": {
-          "title": "Learning Materials",
-          "description": "Access tutorials, guides, and video lessons that help you learn and practice Bitcoin at your own pace"
+        "bookclub": {
+          "title": "Bitcoin Reading Club",
+          "description": "We gather to discuss Bitcoin-related books that accurately explain Bitcoin"
         }
       }
     },
@@ -164,9 +164,9 @@
             "title": "Utilities",
             "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification"
           },
-          "layer2s": {
-            "title": "Layer 2s",
-            "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network"
+          "research": {
+            "title": "Research",
+            "description": "Explore academic papers, technical research, and whitepapers related to Bitcoin"
           }
         }
       },
@@ -703,5 +703,20 @@
         "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references."
       }
     }
+  },
+  "subscribe": {
+    "button": "Subscribe",
+    "title": "Subscribe to Bitomun",
+    "description": "Get the latest updates on Bitcoin development, education, and community",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com"
+    },
+    "submit": "Subscribe",
+    "submitting": "Submitting...",
+    "success": "Thank you for subscribing!",
+    "error": "Failed to subscribe. Please try again."
   }
 }
