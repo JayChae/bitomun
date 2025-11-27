@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ReactNode, useState } from "react";
+import { toast } from "sonner";
 
 import { Button } from "./ui/button";
 import {
@@ -25,26 +26,36 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Implement actual subscription logic here
-    // For now, just simulate an API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email }),
+      });
 
-    setIsSuccess(true);
-    setIsSubmitting(false);
+      if (!response.ok) {
+        throw new Error(t("error") || "구독 신청에 실패했습니다.");
+      }
 
-    // Reset form after 2 seconds
-    setTimeout(() => {
+      // 성공: 토스트 띄우고 모달 닫기
+      toast.success(t("success") || "구독 신청이 성공적으로 접수되었습니다.");
+      setOpen(false);
+
+      // 폼 초기화
       setName("");
       setEmail("");
-      setIsSuccess(false);
-      setOpen(false);
-    }, 2000);
+    } catch {
+      toast.error(t("error") || "구독 신청에 실패했습니다. 다시 시도해주세요.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,41 +67,35 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
           <DialogDescription>{t("description")}</DialogDescription>
         </DialogHeader>
 
-        {isSuccess ? (
-          <div className="text-primary py-8 text-center">
-            <p className="text-lg font-semibold">{t("success")}</p>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="name">{t("fields.name")}</Label>
+            <Input
+              id="name"
+              type="text"
+              placeholder={t("fields.namePlaceholder")}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="name">{t("fields.name")}</Label>
-              <Input
-                id="name"
-                type="text"
-                placeholder={t("fields.namePlaceholder")}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
 
-            <div className="space-y-2">
-              <Label htmlFor="email">{t("fields.email")}</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder={t("fields.emailPlaceholder")}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="email">{t("fields.email")}</Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder={t("fields.emailPlaceholder")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? t("submitting") : t("submit")}
-            </Button>
-          </form>
-        )}
+          <Button type="submit" className="w-full" disabled={isSubmitting}>
+            {isSubmitting ? t("submitting") : t("submit")}
+          </Button>
+        </form>
       </DialogContent>
     </Dialog>
   );
