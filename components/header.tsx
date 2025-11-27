@@ -23,7 +23,6 @@ const links = [
   { href: "/education", label: "Education" },
   { href: "/global", label: "Global" },
   { href: "/apply", label: "Apply" },
-  { href: "https://mini.bitcoinconf.org/", label: "Mini Conference" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
@@ -70,6 +69,16 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href={`https://mini.bitcoinconf.org/${locale}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary text-muted-foreground size-fit text-sm font-medium transition-colors"
+              >
+                Mini Conference
+              </Link>
+            </li>
             <li>
               <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
