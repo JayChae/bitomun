@@ -706,7 +706,7 @@
   },
   "subscribe": {
     "button": "Subscribe",
-    "title": "Subscribe to Bitomun Newsletter",
+    "title": "Subscribe to Bitomun",
     "description": "Get the latest updates on Bitcoin development, education, and community",
     "fields": {
       "name": "Name",
