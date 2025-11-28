@@ -12,6 +12,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
 
+import TeamMembers from "./_components/team-members";
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -118,31 +120,14 @@ export default async function AboutPage({ params }: Props) {
       </section>
 
       {/* Team Section */}
-      {/* <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("team.title")}
           </h2>
-          <div className="flex gap-6 md:gap-12">
-            <div className="text-center">
-              <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/specter.webp" alt="Specter" fill />
-              </div>
-              <h3 className="text-lg font-semibold text-white sm:text-xl">
-                {t("team.members.specter")}
-              </h3>
-            </div>
-            <div className="text-center">
-              <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/calvin.webp" alt="Calvin" fill />
-              </div>
-              <h3 className="text-lg font-semibold text-white sm:text-xl">
-                {t("team.members.calvin")}
-              </h3>
-            </div>
-          </div>
+          <TeamMembers />
         </div>
-      </section> */}
+      </section>
 
       {/* Sponsor Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
@@ -184,10 +169,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-[#f7931a] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:border-[#f7931a] hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-[#f7931a]/10 group-hover:bg-[#f7931a]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Bitcoin className="text-[#f7931a] h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f7931a]/10 transition-colors group-hover:bg-[#f7931a]/20 sm:h-14 sm:w-14">
+                      <Bitcoin className="h-6 w-6 text-[#f7931a] sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.onchain")}
@@ -203,10 +188,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-[#fbbf24] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:border-[#fbbf24] hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-[#fbbf24]/10 group-hover:bg-[#fbbf24]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Zap className="text-[#fbbf24] h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#fbbf24]/10 transition-colors group-hover:bg-[#fbbf24]/20 sm:h-14 sm:w-14">
+                      <Zap className="h-6 w-6 text-[#fbbf24] sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.lightning")}

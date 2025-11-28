@@ -354,8 +354,33 @@
     "team": {
       "title": "TEAM",
       "members": {
-        "specter": "Specter",
-        "calvin": "Calvin"
+        "specter": {
+          "name": "Specter",
+          "position": "Founder",
+          "role": "Bitcoin Developer & Educator",
+          "bio": "Bitcoin educator and developer passionate about spreading Bitcoin knowledge through education and open-source development.\n\n• 🇰🇷 Bitcoin Dev Intern\n• @Bitcoinminiconf Host\n• @BTCSocialLayer Co-founder\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book Author",
+          "expertise": [
+            "Bitcoin Core",
+            "Lightning Network",
+            "Education",
+            "Open Source"
+          ],
+          "social": {
+            "twitter": "https://x.com/k_bitcoiner",
+            "github": ""
+          }
+        },
+        "calvin": {
+          "name": "Calvin",
+          "position": "Adviser",
+          "role": "Bitcoin Developer & Researcher",
+          "bio": "👋 Hi I'm Calvin 👋\nI am an open source developer based in Seoul that works on scaling Bitcoin.\n\nNowadays I'm usually:\n• Working on utreexod, a Bitcoin full node with Utreexo accumulators\n• Working on utreexo, a dynamic hash-based accumulator for Bitcoin\n• Working on btcd, a bitcoin implementation in Go\n• Mentoring next gen of Bitcoin devs with the Asia Bitcoin Dev Internship\n• Being a water deer",
+          "expertise": ["Utreexo", "Bitcoin Core", "Go", "Mentorship"],
+          "social": {
+            "twitter": "https://x.com/kcalvinalvinn",
+            "github": "https://github.com/kcalvinalvin"
+          }
+        }
       }
     },
     "sponsor": {
