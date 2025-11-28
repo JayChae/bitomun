@@ -206,7 +206,7 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
             <div className="flex flex-col items-center justify-center gap-6 lg:items-start">
               {/* Title and Mobile Visual Element */}
               <div className="flex items-center justify-center gap-4 lg:block">
-                <h1 className="text-5xl leading-[0.9] font-black tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl">
+                <h1 className="text-5xl leading-[0.9] font-black sm:text-7xl lg:text-8xl xl:text-9xl">
                   BIT
                   <span className="from-primary to-secondary bg-gradient-to-r bg-clip-text font-bold text-transparent">
                     OMUN

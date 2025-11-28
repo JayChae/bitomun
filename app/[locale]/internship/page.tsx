@@ -39,7 +39,7 @@ export default async function InternshipPage({ params }: Props) {
     <div>
       <IntroSection>
         <div className="space-y-6">
-          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text pb-1 text-4xl leading-tight font-bold text-transparent md:text-5xl">
             {t("hero.title")}
           </h1>
           <p className="text-muted-foreground text-lg sm:text-xl">
