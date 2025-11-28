@@ -74,7 +74,7 @@ export const koreaResourcesEn: CountryResources = {
   ],
   lightning: [
     {
-      name: "Kongang",
+      name: "CornGang",
       description:
         "Korea's first Lightning wallet company, developing Lightning Network-related technology and engaging in community activities",
       url: "https://team.oksu.su",
@@ -210,7 +210,7 @@ export const koreaResourcesKo: CountryResources = {
   ],
   lightning: [
     {
-      name: "Kongang",
+      name: "CornGang",
       description:
         "국내 첫 라이트닝 월렛 회사이며 라이트닝 네트워크(Lightning Network)와 관련된 기술 개발 및 커뮤니티 활동을 하는 팀입니다",
       url: "https://team.oksu.su",
