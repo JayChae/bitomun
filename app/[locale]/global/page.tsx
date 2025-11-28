@@ -148,16 +148,16 @@ function ContinentCard({ continent }: ContinentCardProps) {
         />
 
         {/* Content */}
-        <div className="relative flex h-full flex-col justify-end p-6">
-          <h2 className="mb-2 text-xl font-bold transition-transform duration-300 group-hover:translate-x-1 md:text-2xl">
+        <div className="relative flex h-full flex-col items-center justify-center p-6">
+          <h2 className="mb-2 text-xl font-bold transition-transform duration-300 md:text-2xl">
             {continent.title}
           </h2>
-          <p className="text-muted-foreground line-clamp-2 text-sm transition-opacity duration-300 group-hover:opacity-80">
+          {/* <p className="text-muted-foreground line-clamp-2 text-center text-sm transition-opacity duration-300 group-hover:opacity-80">
             {continent.description}
-          </p>
+          </p> */}
 
           {/* Arrow indicator */}
-          <div className="absolute top-6 right-6 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
+          {/* <div className="absolute top-6 right-6 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
             <svg
               className="h-6 w-6"
               fill="none"
@@ -171,12 +171,12 @@ function ContinentCard({ continent }: ContinentCardProps) {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
 
         {/* Decorative elements */}
-        <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-white/5 blur-2xl transition-all duration-500 group-hover:scale-150" />
-        <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/5 blur-xl transition-all duration-500 group-hover:scale-150" />
+        {/* <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-white/5 blur-2xl transition-all duration-500 group-hover:scale-150" />
+        <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/5 blur-xl transition-all duration-500 group-hover:scale-150" /> */}
       </div>
     </Link>
   );
