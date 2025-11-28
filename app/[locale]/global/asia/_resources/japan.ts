@@ -138,7 +138,7 @@ export const japanResourcesKo: CountryResources = {
     {
       name: "ANAP Holdings",
       description:
-        "소셜 미디어를 통해 비트코인과 관련된 기업 및 투자 정보를 공유하는 곳으로 보입니다",
+        "ANAP Holdings는 비트코인 생태계의 구현을 통해 사람들의 물질적, 정신적 양면에서 풍요로운 삶을 실현하는 것을 사명으로 하고 있습니다",
       url: "https://x.com/ANAP_3189_T",
       logo: "https://pbs.twimg.com/profile_images/1980521481210568704/7JLaNj1n_400x400.jpg",
     },
