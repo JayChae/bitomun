@@ -130,6 +130,33 @@ export default async function EducationPage({ params }: Props) {
           </p>
         </div>
       </IntroSection>
+
+      <Section
+        id="consulting"
+        title={t("sections.consulting.title")}
+        description={t("sections.consulting.description")}
+        className="bg-gradient-to-r from-purple-500/10 to-transparent"
+        icon={MessageSquare}
+      >
+        <OneOnOneConsulting
+          description={t("sections.consulting.fullDescription")}
+          recommendation={t("sections.consulting.recommendation")}
+          buttonText={t("sections.consulting.buttonText")}
+          dialogTitle={t("sections.consulting.dialogTitle")}
+          dialogDescription={t("sections.consulting.dialogDescription")}
+        />
+      </Section>
+
+      {/* Education Resources Section */}
+      <DevSection
+        title={t("sections.development.title")}
+        resources={educationDevResources}
+        buttonLink="education/development/guides-tutorials"
+        buttonText={t("sections.development.buttonText")}
+        icon={CodeXml}
+        className="bg-gradient-to-l from-teal-500/10 to-transparent"
+      />
+
       <Section
         id="offline"
         title={t("sections.offline.title")}
@@ -178,32 +205,6 @@ export default async function EducationPage({ params }: Props) {
             t("sections.bookClub.targets.item2"),
             t("sections.bookClub.targets.item3"),
           ]}
-        />
-      </Section>
-
-      {/* Education Resources Section */}
-      <DevSection
-        title={t("sections.development.title")}
-        resources={educationDevResources}
-        buttonLink="education/development/guides-tutorials"
-        buttonText={t("sections.development.buttonText")}
-        icon={CodeXml}
-        className="bg-gradient-to-l from-teal-500/10 to-transparent"
-      />
-
-      <Section
-        id="consulting"
-        title={t("sections.consulting.title")}
-        description={t("sections.consulting.description")}
-        className="bg-gradient-to-r from-purple-500/10 to-transparent"
-        icon={MessageSquare}
-      >
-        <OneOnOneConsulting
-          description={t("sections.consulting.fullDescription")}
-          recommendation={t("sections.consulting.recommendation")}
-          buttonText={t("sections.consulting.buttonText")}
-          dialogTitle={t("sections.consulting.dialogTitle")}
-          dialogDescription={t("sections.consulting.dialogDescription")}
         />
       </Section>
     </div>
@@ -425,9 +426,9 @@ function OneOnOneConsulting({
   return (
     <div className="flex w-full max-w-2xl flex-col items-center gap-4">
       <Card className="w-full">
-        <CardHeader>
-          <div className="space-y-4">
-            <p className="text-muted-foreground leading-relaxed">
+        <CardHeader className="">
+          <div className="flex flex-col items-center justify-center gap-4">
+            <p className="text-muted-foreground text-center leading-relaxed">
               {description}
             </p>
             <p className="text-muted-foreground font-semibold">
