@@ -77,7 +77,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 rel="noopener noreferrer"
                 className="hover:text-primary text-muted-foreground size-fit text-sm font-medium transition-colors"
               >
-                Mini Conference
+                Conference
               </Link>
             </li>
             <li>
