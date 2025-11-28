@@ -32,7 +32,17 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/subscribe", {
+      // 이메일 전송 API 호출
+      // const emailResponse = await fetch("/api/subscribe", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ name, email }),
+      // });
+
+      // 스프레드시트 저장 API 호출
+      const spreadsheetResponse = await fetch("/api/spreedsheet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,8 +50,12 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
         body: JSON.stringify({ name, email }),
       });
 
-      if (!response.ok) {
-        throw new Error(t("error") || "구독 신청에 실패했습니다.");
+      const data = await spreadsheetResponse.json();
+
+      if (!spreadsheetResponse.ok) {
+        // API에서 반환한 에러 메시지 표시
+        toast.error(data.error || t("error") || "구독 신청에 실패했습니다.");
+        return;
       }
 
       // 성공: 토스트 띄우고 모달 닫기

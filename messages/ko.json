@@ -356,8 +356,33 @@
     "team": {
       "title": "TEAM",
       "members": {
-        "specter": "스펙터",
-        "calvin": "캘빈"
+        "specter": {
+          "name": "스펙터",
+          "position": "Founder",
+          "role": "비토문 창립자 & 미니 컨퍼런스 호스트",
+          "bio": "• 🇰🇷 Bitcoin Dev Intern\n• @Bitcoinminiconf 호스트\n• @BTCSocialLayer 공동창립자\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book 저자",
+          "expertise": [
+            "비트코인 코어",
+            "라이트닝 네트워크",
+            "교육",
+            "오픈 소스"
+          ],
+          "social": {
+            "twitter": "https://x.com/k_bitcoiner",
+            "github": ""
+          }
+        },
+        "calvin": {
+          "name": "캘빈",
+          "position": "Advisor",
+          "role": "비트코인 개발자 & 연구원",
+          "bio": "서울을 기반으로 비트코인 확장성에 집중하는 오픈소스 개발자\n\n주요 활동:\n• utreexod 작업 - Utreexo 어큐뮬레이터를 사용한 비트코인 풀노드\n• utreexo 작업 - 비트코인을 위한 동적 해시 기반 어큐뮬레이터\n• btcd 작업 - Go로 구현한 비트코인\n• Asia Bitcoin Dev Internship을 통한 차세대 비트코인 개발자 멘토링\n",
+          "expertise": ["Utreexo", "비트코인 코어", "Go", "멘토십"],
+          "social": {
+            "twitter": "https://x.com/kcalvinalvinn",
+            "github": "https://github.com/kcalvinalvin"
+          }
+        }
       }
     },
     "sponsor": {
