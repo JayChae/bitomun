@@ -137,7 +137,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="border-border border-t py-4 md:hidden">
+          <div className="border-border border-t py-4">
             <ul className="flex flex-col gap-4">
               {links.map((link) => (
                 <li
@@ -165,6 +165,17 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   </Link>
                 </li>
               ))}
+              <li onClick={() => setMobileMenuOpen(false)} className="w-full">
+                <Link
+                  href={`https://mini.bitcoinconf.org/${locale}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black"
+                >
+                  Conference
+                </Link>
+              </li>
+
               <li className="border-border w-full border-t pt-4">
                 <div className="px-4 pb-3">
                   <SubscribeModal>
