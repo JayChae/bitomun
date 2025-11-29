@@ -624,7 +624,7 @@
   "subscribe": {
     "button": "구독하기",
     "title": "Bitomun 구독",
-    "description": "비트코인 개발, 교육, 커뮤니티에 관한 최신 소식을 받아보세요",
+    "description": "비트코인 컨퍼런스, 뉴스 그리고 강좌 개설 소식을 받아보세요",
     "fields": {
       "name": "이름",
       "namePlaceholder": "홍길동",

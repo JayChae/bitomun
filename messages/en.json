@@ -736,7 +736,7 @@
   "subscribe": {
     "button": "Subscribe",
     "title": "Subscribe to Bitomun",
-    "description": "Get the latest updates on Bitcoin development, education, and community",
+    "description": "Get the latest updates on Bitcoin conference, news, and lectures",
     "fields": {
       "name": "Name",
       "namePlaceholder": "John Doe",
