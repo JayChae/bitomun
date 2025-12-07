@@ -27,22 +27,25 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // 프론트엔드 이메일 검증
+    if (!validateEmail(email)) {
+      toast.error(t("errors.invalidEmail"));
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // 이메일 전송 API 호출
-      // const emailResponse = await fetch("/api/subscribe", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({ name, email }),
-      // });
-
       // 스프레드시트 저장 API 호출
-      const spreadsheetResponse = await fetch("/api/spreedsheet", {
+      const spreadsheetResponse = await fetch("/api/spreadsheet", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,22 +56,51 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
       const data = await spreadsheetResponse.json();
 
       if (!spreadsheetResponse.ok) {
-        // API에서 반환한 에러 메시지 표시
-        toast.error(data.error || t("error") || "구독 신청에 실패했습니다.");
+        // errorCode 기반 다국어 에러 메시지 표시
+        const errorCode = data.errorCode;
+        let errorMessage = t("error");
+
+        switch (errorCode) {
+          case "INVALID_EMAIL":
+            errorMessage = t("errors.invalidEmail");
+            break;
+          case "REQUIRED_FIELDS":
+            errorMessage = t("errors.requiredFields");
+            break;
+          case "DUPLICATE_EMAIL":
+            errorMessage = t("errors.duplicateEmail");
+            break;
+          case "SPREADSHEET_ERROR":
+            errorMessage = t("errors.spreadsheetError");
+            break;
+          case "SERVER_ERROR":
+            errorMessage = t("errors.serverError");
+            break;
+          case "TOO_MANY_REQUESTS":
+            errorMessage = t("errors.tooManyRequests");
+            break;
+          default:
+            errorMessage = t("error");
+        }
+
+        toast.error(errorMessage);
         return;
       }
 
       // 성공: 토스트 띄우고 모달 닫기
-      toast.success(t("success") || "구독 신청이 성공적으로 접수되었습니다.");
+      toast.success(t("success"));
       setOpen(false);
 
       // 폼 초기화
       setName("");
       setEmail("");
-    } catch {
-      toast.error(t("error") || "구독 신청에 실패했습니다. 다시 시도해주세요.");
+    } catch (error) {
+      console.log(error);
+      // 네트워크 오류 등
+      toast.error(t("errors.networkError"));
     } finally {
       setIsSubmitting(false);
+      setOpen(false);
     }
   };
 

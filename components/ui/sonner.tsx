@@ -27,6 +27,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           success: "!bg-primary !text-primary-foreground !border-primary",
+          error: "!bg-secondary !text-primary-foreground",
         },
       }}
       style={

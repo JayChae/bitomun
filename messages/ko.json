@@ -68,8 +68,8 @@
         "description": "비트코인 생태계에 참여하세요"
       },
       "sponsorship": {
-        "title": "후원 신청",
-        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+        "title": "펀딩 신청",
+        "description": "비트코인을 프로젝트를 위한 후원을 받아보세요"
       },
       "other": {
         "title": "기타 문의",
@@ -452,9 +452,9 @@
         "description": "비트코인 개발 인턴으로 참여하여 실무 경험을 쌓으세요"
       },
       "sponsorship": {
-        "title": "후원 신청",
-        "subtitle": "Sponsorship Application",
-        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+        "title": "펀딩 신청",
+        "subtitle": "Apply for Funding",
+        "description": "비트코인 교육 프로젝트를 위한 펀딩을 받아보세요"
       },
       "other": {
         "title": "기타 사항",
@@ -493,10 +493,10 @@
       "githubPlaceholder": "https://github.com/username",
       "organization": "조직/회사명",
       "organizationPlaceholder": "회사명 또는 개인",
-      "amount": "후원 희망 규모",
+      "amount": "신청 희망 금액",
       "amountPlaceholder": "예: 월 100만원, 일시 1,000만원",
       "messageInternship": "지원 동기 및 자기소개",
-      "messageSponsorship": "후원 의향 및 메시지",
+      "messageSponsorship": "펀딩 신청 사유 및 프로젝트 설명",
       "messageOther": "문의 내용",
       "messagePlaceholder": "자세히 작성해주세요..."
     }
@@ -634,7 +634,16 @@
     "submit": "구독하기",
     "submitting": "전송 중...",
     "success": "구독이 완료되었습니다.",
-    "error": "구독 신청에 실패했습니다. 다시 시도해주세요."
+    "error": "구독 신청에 실패했습니다. 다시 시도해주세요.",
+    "errors": {
+      "invalidEmail": "유효하지 않은 이메일 형식입니다.",
+      "requiredFields": "이름과 이메일을 모두 입력해주세요.",
+      "duplicateEmail": "이미 등록된 이메일입니다.",
+      "spreadsheetError": "스프레드시트 연결에 실패했습니다.",
+      "serverError": "서버 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+      "tooManyRequests": "너무 많은 요청을 보냈습니다. 잠시 후 다시 시도해주세요.",
+      "networkError": "네트워크 오류가 발생했습니다. 인터넷 연결을 확인해주세요."
+    }
   },
   "educationPage": {
     "hero": {
