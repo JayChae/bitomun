@@ -746,6 +746,15 @@
     "submit": "Subscribe",
     "submitting": "Submitting...",
     "success": "Thank you for subscribing!",
-    "error": "Failed to subscribe. Please try again."
+    "error": "Failed to subscribe. Please try again.",
+    "errors": {
+      "invalidEmail": "Invalid email format.",
+      "requiredFields": "Please enter both name and email.",
+      "duplicateEmail": "This email is already registered.",
+      "spreadsheetError": "Failed to connect to spreadsheet.",
+      "serverError": "A server error occurred. Please try again later.",
+      "tooManyRequests": "Too many requests. Please try again later.",
+      "networkError": "Network error occurred. Please check your internet connection."
+    }
   }
 }

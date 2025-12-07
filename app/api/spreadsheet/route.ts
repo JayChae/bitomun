@@ -2,6 +2,14 @@ import { JWT } from "google-auth-library";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { NextRequest, NextResponse } from "next/server";
 
+import { rateLimit } from "@/lib/rate-limit";
+
+// Rate limiter: 5 requests per minute per IP
+const limiter = rateLimit({
+  interval: 60 * 1000, // 1 minute
+  uniqueTokenPerInterval: 500, // Max 500 unique IPs per interval
+});
+
 async function loadGoogleDoc() {
   try {
     // Base64로 인코딩된 서비스 계정 JSON을 디코딩
@@ -33,6 +41,21 @@ async function loadGoogleDoc() {
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const identifier =
+      request.headers.get("x-forwarded-for") ??
+      request.headers.get("x-real-ip") ??
+      "anonymous";
+    const rateLimitResult = await limiter.check(5, identifier);
+
+    if (!rateLimitResult.success) {
+      console.warn("⚠️ Rate limit exceeded:", identifier);
+      return NextResponse.json(
+        { ok: false, errorCode: "TOO_MANY_REQUESTS" },
+        { status: 429 },
+      );
+    }
+
     const body = await request.json();
     const { name, email } = body;
 
@@ -41,7 +64,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email) {
       console.error("❌ 필수 필드 누락:", { name, email });
       return NextResponse.json(
-        { ok: false, error: "이름과 이메일은 필수입니다." },
+        { ok: false, errorCode: "REQUIRED_FIELDS" },
         { status: 400 },
       );
     }
@@ -50,7 +73,7 @@ export async function POST(request: NextRequest) {
     if (!doc) {
       console.error("❌ 스프레드시트 연결 실패");
       return NextResponse.json(
-        { ok: false, error: "스프레드시트 연결에 실패했습니다." },
+        { ok: false, errorCode: "SPREADSHEET_ERROR" },
         { status: 500 },
       );
     }
@@ -71,12 +94,14 @@ export async function POST(request: NextRequest) {
     const rows = await sheet.getRows();
     console.log(`📊 기존 행 개수: ${rows.length}`);
 
-    // 이미 등록된 이메일인지 검증합니다.
-    const isRegistered = rows.some((row) => row.get("email") === email);
-    if (isRegistered) {
+    // 이미 등록된 이메일인지 검증합니다 (개선된 중복 체크)
+    const existingEmails = new Set(
+      rows.map((row) => row.get("email")).filter(Boolean),
+    );
+    if (existingEmails.has(email)) {
       console.warn("⚠️ 이미 등록된 이메일:", email);
       return NextResponse.json(
-        { ok: false, error: "이미 등록된 이메일입니다." },
+        { ok: false, errorCode: "DUPLICATE_EMAIL" },
         { status: 400 },
       );
     }
@@ -100,7 +125,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("❌ 에러 발생:", error);
     return NextResponse.json(
-      { ok: false, error: "서버 오류가 발생했습니다." },
+      { ok: false, errorCode: "SERVER_ERROR" },
       { status: 500 },
     );
   }
