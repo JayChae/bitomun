@@ -35,7 +35,7 @@ export default async function SponsorshipPage({ params }: Props) {
       <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl space-y-6 text-center">
           <Heart className="text-secondary mx-auto h-16 w-16" />
-          <h1 className="from-secondary to-primary bg-gradient-to-r bg-clip-text text-[clamp(2rem,6vw,4rem)] leading-[0.9] font-black tracking-tighter text-transparent">
+          <h1 className="from-secondary to-primary bg-gradient-to-r bg-clip-text text-[clamp(2rem,6vw,4rem)] leading-[1.4] font-black tracking-tighter text-transparent">
             {t("categories.sponsorship.title")}
           </h1>
           <p className="text-muted-foreground text-xl md:text-2xl">

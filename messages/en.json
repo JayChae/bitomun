@@ -68,8 +68,8 @@
         "description": "Join the Bitcoin ecosystem"
       },
       "sponsorship": {
-        "title": "Sponsorship",
-        "description": "Support Bitcoin education projects and grow together"
+        "title": "Apply for Funding",
+        "description": "Apply for funding for your Bitcoin education project and grow together"
       },
       "other": {
         "title": "Other Inquiries",
@@ -450,9 +450,9 @@
         "description": "Gain hands-on experience as a Bitcoin development intern"
       },
       "sponsorship": {
-        "title": "Sponsorship",
-        "subtitle": "Sponsorship Application",
-        "description": "Support Bitcoin education projects and grow together"
+        "title": "Apply for Funding",
+        "subtitle": "Funding Application",
+        "description": "Apply for funding for your Bitcoin education project and grow together"
       },
       "other": {
         "title": "Other Inquiries",
@@ -491,10 +491,10 @@
       "githubPlaceholder": "https://github.com/username",
       "organization": "Organization/Company",
       "organizationPlaceholder": "Company name or Individual",
-      "amount": "Sponsorship Amount",
+      "amount": "Requested Funding Amount",
       "amountPlaceholder": "e.g., $1,000/month, one-time $10,000",
       "messageInternship": "Motivation & Introduction",
-      "messageSponsorship": "Sponsorship Intent & Message",
+      "messageSponsorship": "Funding Application Reason & Project Description",
       "messageOther": "Inquiry Details",
       "messagePlaceholder": "Please provide details..."
     }

@@ -68,8 +68,8 @@
         "description": "비트코인 생태계에 참여하세요"
       },
       "sponsorship": {
-        "title": "후원 신청",
-        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+        "title": "펀딩 신청",
+        "description": "비트코인을 프로젝트를 위한 후원을 받아보세요"
       },
       "other": {
         "title": "기타 문의",
@@ -452,9 +452,9 @@
         "description": "비트코인 개발 인턴으로 참여하여 실무 경험을 쌓으세요"
       },
       "sponsorship": {
-        "title": "후원 신청",
-        "subtitle": "Sponsorship Application",
-        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+        "title": "펀딩 신청",
+        "subtitle": "Apply for Funding",
+        "description": "비트코인 교육 프로젝트를 위한 펀딩을 받아보세요"
       },
       "other": {
         "title": "기타 사항",
@@ -493,10 +493,10 @@
       "githubPlaceholder": "https://github.com/username",
       "organization": "조직/회사명",
       "organizationPlaceholder": "회사명 또는 개인",
-      "amount": "후원 희망 규모",
+      "amount": "신청 희망 금액",
       "amountPlaceholder": "예: 월 100만원, 일시 1,000만원",
       "messageInternship": "지원 동기 및 자기소개",
-      "messageSponsorship": "후원 의향 및 메시지",
+      "messageSponsorship": "펀딩 신청 사유 및 프로젝트 설명",
       "messageOther": "문의 내용",
       "messagePlaceholder": "자세히 작성해주세요..."
     }
