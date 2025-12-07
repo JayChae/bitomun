@@ -95,6 +95,7 @@ export default function SubscribeModal({ children }: SubscribeModalProps) {
       setName("");
       setEmail("");
     } catch (error) {
+      console.log(error);
       // 네트워크 오류 등
       toast.error(t("errors.networkError"));
     } finally {
