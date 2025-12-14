@@ -35,7 +35,7 @@ export function IntroDescription({
   return (
     <p
       className={cn(
-        "text-muted-foreground mx-auto max-w-2xl text-lg leading-relaxed font-light md:text-xl",
+        "text-muted-foreground mx-auto max-w-4xl text-lg leading-relaxed font-light md:text-xl",
         className,
       )}
     >

@@ -146,7 +146,7 @@
   },
   "development": {
     "title": "Development Resources",
-    "description": "개발자, 학습자, 빌더들을 위한 선별된 비트코인, 라이트닝 네트워크, 그리고 교육 자료",
+    "description": "비트코인과 라이트닝 네트워크 기술을 연구하고 구축하는 개발자를 위해 설계된 기술 리소스 플랫폼입니다.",
     "developmentLinks": {
       "layer1": "Layer1",
       "layer2": "Layer2",
@@ -166,8 +166,8 @@
             "description": "애플리케이션에서 비트코인 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "utilities": {
-            "title": "유틸리티",
-            "description": "트랜잭션 시뮬레이션, 스크립트 탐색, 블록체인 시각화, 코드 무결성 검증 등 다양한 도구 모음입니다"
+            "title": "지갑",
+            "description": "비트코인을 안전하게 보관하고 관리할 수 있는 다양한 소프트웨어 및 하드웨어 지갑 솔루션입니다"
           },
           "research": {
             "title": "연구 자료",
@@ -184,16 +184,16 @@
             "description": "라이트닝 네트워크 애플리케이션을 구축하기 위한 라이브러리와 개발 도구 키트입니다"
           },
           "lspsEnterprise": {
-            "title": "LSP",
-            "description": "라이트닝 네트워크를 활용하려는 기업을 위한 엔터프라이즈급 도구와 서비스입니다"
+            "title": "API & 결제",
+            "description": "애플리케이션에서 라이트닝 네트워크 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "dashboardsMonitoring": {
-            "title": "모니터링",
-            "description": "라이트닝 네트워크 노드의 관리 및 모니터링을 위한 웹 기반 및 텍스트 기반 인터페이스입니다"
+            "title": "지갑",
+            "description": "라이트닝 네트워크를 지원하는 다양한 지갑 솔루션으로 빠른 결제를 경험할 수 있습니다"
           },
           "routingLiquidity": {
-            "title": "라우팅",
-            "description": "결제 라우팅 관리와 라이트닝 채널의 유동성 관리에 중점을 둔 도구와 서비스입니다"
+            "title": "연구 자료",
+            "description": "라이트닝 네트워크와 관련된 논문, 기술 연구, 백서 등을 탐색하세요"
           }
         }
       },

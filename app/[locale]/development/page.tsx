@@ -2,14 +2,10 @@ import {
   ArrowRight,
   BanknoteArrowDown,
   Bitcoin,
-  Building2,
-  ChartNetwork,
-  CodeXml,
   FlaskConical,
   LucideIcon,
-  Pickaxe,
-  Route,
   ToolCase,
+  Wallet,
   Zap,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -61,7 +57,7 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer1.items.librariesSdks.title"),
       description: t("resources.layer1.items.librariesSdks.description"),
-      icon: CodeXml,
+      icon: ToolCase,
       link: "/development/layer1/libraries-sdks",
     },
     {
@@ -73,7 +69,7 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer1.items.utilities.title"),
       description: t("resources.layer1.items.utilities.description"),
-      icon: Pickaxe,
+      icon: Wallet,
       link: "/development/layer1/utilities",
     },
     {
@@ -95,19 +91,19 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer2.items.lspsEnterprise.title"),
       description: t("resources.layer2.items.lspsEnterprise.description"),
-      icon: Building2,
+      icon: BanknoteArrowDown,
       link: "/development/layer2/lsps-enterprise",
     },
     {
       title: t("resources.layer2.items.dashboardsMonitoring.title"),
       description: t("resources.layer2.items.dashboardsMonitoring.description"),
-      icon: ChartNetwork,
+      icon: Wallet,
       link: "/development/layer2/dashboards-monitoring",
     },
     {
       title: t("resources.layer2.items.routingLiquidity.title"),
       description: t("resources.layer2.items.routingLiquidity.description"),
-      icon: Route,
+      icon: FlaskConical,
       link: "/development/layer2/routing-liquidity",
     },
   ];

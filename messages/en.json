@@ -145,7 +145,7 @@
   },
   "development": {
     "title": "Development Resources",
-    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem",
+    "description": "A professional technical resource platform designed for developers researching and building Bitcoin and Lightning Network-based technology.",
     "developmentLinks": {
       "layer1": "Layer1",
       "layer2": "Layer2",
@@ -165,8 +165,8 @@
             "description": "Tools and platforms for easy integration of Bitcoin payments in applications"
           },
           "utilities": {
-            "title": "Utilities",
-            "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification"
+            "title": "Wallets",
+            "description": "Various software and hardware wallet solutions for securely storing and managing Bitcoin"
           },
           "research": {
             "title": "Research",
@@ -183,16 +183,16 @@
             "description": "Libraries and development kits for building Lightning Network applications"
           },
           "lspsEnterprise": {
-            "title": "LSPs",
-            "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network"
+            "title": "APIs & Payments",
+            "description": "Tools and platforms for easy integration of Lightning Network payments in applications"
           },
           "dashboardsMonitoring": {
-            "title": "Monitoring",
-            "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes"
+            "title": "Wallets",
+            "description": "Various wallet solutions supporting Lightning Network for fast payments experience"
           },
           "routingLiquidity": {
-            "title": "Routing",
-            "description": "Tools and services focused on managing payment routing and Lightning channel liquidity"
+            "title": "Research",
+            "description": "Explore academic papers, technical research, and whitepapers related to Lightning Network"
           }
         }
       },
