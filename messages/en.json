@@ -441,7 +441,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "Join the Bitcoin ecosystem"
+      "description": "An official application and participation gateway to help you realize your ideas and passion"
     },
     "categories": {
       "internship": {
@@ -452,7 +452,7 @@
       "sponsorship": {
         "title": "Apply for Funding",
         "subtitle": "Funding Application",
-        "description": "Apply for funding for your Bitcoin education project and grow together"
+        "description": "Apply for funding for Bitcoin education and industry expansion activities"
       },
       "other": {
         "title": "Other Inquiries",

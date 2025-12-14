@@ -443,7 +443,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "비트코인 네트워크에 참여할 수 있도록 다양한 프로그램에 신청하세요. 인턴십, 펀딩 신청 그 외에 다양한 제안서를 보내세요"
+      "description": "여러분이 가진 아이디어와 열정을 실현할 수 있도록 돕는 공식 신청 및 참여 창구입니다"
     },
     "categories": {
       "internship": {
@@ -454,7 +454,7 @@
       "sponsorship": {
         "title": "펀딩 신청",
         "subtitle": "Apply for Funding",
-        "description": "비트코인 교육 프로젝트를 위한 펀딩을 받아보세요"
+        "description": "비트코인 교육과 산업 확대 활동을 위한 자금을 신청하세요"
       },
       "other": {
         "title": "기타 사항",

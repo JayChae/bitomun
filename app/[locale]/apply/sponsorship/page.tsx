@@ -38,7 +38,7 @@ export default async function SponsorshipPage({ params }: Props) {
           <h1 className="from-secondary to-primary bg-gradient-to-r bg-clip-text text-[clamp(2rem,6vw,4rem)] leading-[1.4] font-black tracking-tighter text-transparent">
             {t("categories.sponsorship.title")}
           </h1>
-          <p className="text-muted-foreground text-xl md:text-2xl">
+          <p className="text-muted-foreground text-lg md:text-xl">
             {t("categories.sponsorship.description")}
           </p>
         </div>
@@ -48,7 +48,7 @@ export default async function SponsorshipPage({ params }: Props) {
       <section className="container mx-auto px-4 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <Button variant="ghost" asChild className="mb-8">
-            <Link href="/support">{t("common.back")}</Link>
+            <Link href="/apply">{t("common.back")}</Link>
           </Button>
           <SponsorshipForm />
         </div>
