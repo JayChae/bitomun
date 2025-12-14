@@ -230,14 +230,17 @@ function Section({
 }: SectionProps) {
   const Icon = icon;
   return (
-    <section id={id} className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
+    <section
+      id={id}
+      className={cn("scroll-mt-15 px-4 py-24 sm:px-6 lg:px-8", className)}
+    >
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex items-center justify-center gap-3">
             {Icon && <Icon className="text-primary size-8" />}
             <h2 className="text-3xl font-bold">{title}</h2>
           </div>
-          <span>{description}</span>
+          <span className="text-center">{description}</span>
         </div>
         {children}
       </div>

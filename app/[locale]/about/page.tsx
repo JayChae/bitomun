@@ -72,7 +72,7 @@ export default async function AboutPage({ params }: Props) {
               </p>
             </Link>
             <Link
-              href="/education"
+              href="/education#offline"
               className="hover:border-primary/50 rounded-lg border border-zinc-800 bg-zinc-900 p-5 text-center transition-colors sm:p-6 lg:p-8"
             >
               <div className="bg-primary/10 mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full sm:mb-4 sm:h-12 sm:w-12 lg:h-14 lg:w-14">
