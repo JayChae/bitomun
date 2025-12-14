@@ -10,7 +10,7 @@ import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 
 import TeamMembers from "./_components/team-members";
 
@@ -44,9 +44,7 @@ export default async function AboutPage({ params }: Props) {
               OMUN
             </span>
           </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed font-light text-gray-300 sm:text-lg md:text-xl">
-            {t("intro")}
-          </p>
+          <IntroDescription>{t("intro")}</IntroDescription>
         </div>
       </IntroSection>
 

@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -94,9 +94,7 @@ export default async function GlobalPage({ params }: Props) {
           <h1 className="from-primary via-secondary to-primary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
             {t("title")}
           </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg md:text-xl">
-            {t("description")}
-          </p>
+          <IntroDescription>{t("description")}</IntroDescription>
         </div>
       </IntroSection>
 

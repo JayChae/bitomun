@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types";
 
@@ -42,9 +42,7 @@ export default async function InternshipPage({ params }: Props) {
           <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text pb-1 text-4xl leading-tight font-bold text-transparent md:text-5xl">
             {t("hero.title")}
           </h1>
-          <p className="text-muted-foreground text-lg sm:text-xl">
-            {t("hero.description")}
-          </p>
+          <IntroDescription>{t("hero.description")}</IntroDescription>
         </div>
       </IntroSection>
 

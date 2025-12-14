@@ -22,7 +22,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -119,9 +119,7 @@ export default async function DevelopmentPage({ params }: Props) {
           <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
             {t("title")}
           </h1>
-          <p className="text-muted-foreground text-base sm:text-lg">
-            {t("description")}
-          </p>
+          <IntroDescription>{t("description")}</IntroDescription>
           <DevelopmentLinks
             className="mt-12"
             developmentLinks={developmentLinks}

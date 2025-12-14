@@ -28,7 +28,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType, LucideIcon } from "@/types";
@@ -125,9 +125,7 @@ export default async function EducationPage({ params }: Props) {
           <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
             {t("hero.title")}
           </h1>
-          <p className="text-muted-foreground text-lg sm:text-xl">
-            {t("hero.description")}
-          </p>
+          <IntroDescription>{t("hero.description")}</IntroDescription>
         </div>
       </IntroSection>
 
