@@ -55,7 +55,7 @@ export default async function SponsorshipPage({ params }: Props) {
       </section>
 
       {/* Support Section */}
-      <section className="container mx-auto px-4 pb-24 sm:px-6 lg:px-8">
+      {/* <section className="container mx-auto px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="mb-4 text-2xl font-black">{t("support.title")}</h2>
           <p className="text-muted-foreground mb-8">
@@ -82,7 +82,7 @@ export default async function SponsorshipPage({ params }: Props) {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
