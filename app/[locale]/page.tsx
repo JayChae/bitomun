@@ -325,13 +325,6 @@ const DEV_RESOURCES = [
     description: "development.resources.layer2.description",
     link: "/development/layer2/libraries-sdks",
   },
-  {
-    id: "education",
-    icon: BookOpen,
-    title: "development.resources.education.title",
-    description: "development.resources.education.description",
-    link: "/development/education/guides-tutorials",
-  },
 ] as const;
 
 const CONTINENTS = [
