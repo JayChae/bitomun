@@ -501,7 +501,7 @@
   },
   "global": {
     "title": "Global Communities",
-    "description": "Explore Bitcoin centers, organizations, and communities across all continents. Connect with Bitcoiners worldwide and discover local meetups, educational initiatives, and development hubs",
+    "description": "A global hub connecting Bitcoin communities and networks worldwide, including Korea. By sharing and collaborating on Bitcoin philosophy and technology across borders, languages, and cultures, we aim to build a broader-scale ecosystem",
     "continentLinks": {
       "asia": "Asia",
       "europe": "Europe",
@@ -650,6 +650,7 @@
       },
       "development": {
         "title": "Development Education Resource",
+        "description": "A professional educational platform centered on Bitcoin and Lightning Network technology, designed for everyone from beginners to advanced developers and builders",
         "buttonText": "View More +3"
       },
       "consulting": {
@@ -717,19 +718,19 @@
     "devResources": {
       "guidesTutorials": {
         "title": "Guides & Tutorials",
-        "description": "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development."
+        "description": "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development"
       },
       "classesCourses": {
         "title": "Classes & Courses",
-        "description": "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development."
+        "description": "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development"
       },
       "certifications": {
         "title": "Developer Certifications",
-        "description": "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development."
+        "description": "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development"
       },
       "books": {
         "title": "Developer Books",
-        "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references."
+        "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references"
       }
     }
   },

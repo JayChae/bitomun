@@ -148,6 +148,7 @@ export default async function EducationPage({ params }: Props) {
       {/* Education Resources Section */}
       <DevSection
         title={t("sections.development.title")}
+        description={t("sections.development.description")}
         resources={educationDevResources}
         buttonLink="education/development/guides-tutorials"
         buttonText={t("sections.development.buttonText")}
@@ -470,6 +471,7 @@ type Resource = {
 
 type DevSectionProps = {
   title: string;
+  description?: string;
   resources: Resource[];
   buttonLink: string;
   buttonText: string;
@@ -479,6 +481,7 @@ type DevSectionProps = {
 
 function DevSection({
   title,
+  description,
   resources,
   buttonLink,
   buttonText,
@@ -489,9 +492,12 @@ function DevSection({
   return (
     <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-12">
-        <div className="flex w-full items-center justify-center gap-3">
-          <Icon className="text-primary size-8" />
-          <h2 className="text-3xl font-bold">{title}</h2>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-3">
+            <Icon className="text-primary size-8" />
+            <h2 className="text-3xl font-bold">{title}</h2>
+          </div>
+          {description && <span className="text-center">{description}</span>}
         </div>
 
         <div className="mx-auto flex flex-wrap justify-center gap-6">
