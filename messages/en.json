@@ -378,6 +378,26 @@
             "twitter": "https://x.com/kcalvinalvinn",
             "github": "https://github.com/kcalvinalvin"
           }
+        },
+        "mineey": {
+          "name": "Mineey",
+          "position": "Art Director",
+          "bio": "Art Director for Bitcoin Mini Conference\n\nKey Activities:\n• Bitcoin Mini Conference Art Director\n• @SaturdayBlock Co-founder\n",
+          "expertise": ["Art Direction", "Design", "Branding"],
+          "social": {
+            "twitter": "https://x.com/mineey_2100",
+            "github": ""
+          }
+        },
+        "ivar": {
+          "name": "Ivar",
+          "position": "Web Developer",
+          "bio": "Web Developer for Bitomun and Bitcoin Mini Conference\n\nKey Activities:\n• Bitcoin Mini Conference Web Developer\n• Bitomun Web Developer\n",
+          "expertise": ["Web Development", "Next.js", "TypeScript"],
+          "social": {
+            "twitter": "https://x.com/IvarChae",
+            "github": ""
+          }
         }
       }
     },

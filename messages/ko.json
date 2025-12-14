@@ -380,6 +380,26 @@
             "twitter": "https://x.com/kcalvinalvinn",
             "github": "https://github.com/kcalvinalvin"
           }
+        },
+        "mineey": {
+          "name": "미니",
+          "position": "Art Director",
+          "bio": "미니컨퍼런스 아트 디렉터\n\n주요 활동:\n• 미니컨퍼런스 아트 디렉터\n• @SaturdayBlock 공동 창립자\n",
+          "expertise": ["Art Direction", "Design", "Branding"],
+          "social": {
+            "twitter": "https://x.com/mineey_2100",
+            "github": ""
+          }
+        },
+        "ivar": {
+          "name": "아이바",
+          "position": "Web Developer",
+          "bio": "비토문/미니컨퍼런스의 웹 개발자\n\n주요 활동:\n• 미니컨퍼런스 웹 개발\n• 비토문 웹 개발\n",
+          "expertise": ["Web Development", "Next.js", "TypeScript"],
+          "social": {
+            "twitter": "https://x.com/IvarChae",
+            "github": "https://github.com/JayChae"
+          }
         }
       }
     },

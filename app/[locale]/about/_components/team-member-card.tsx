@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -23,22 +22,35 @@ type TeamMember = {
 type TeamMemberCardProps = {
   member: TeamMember;
   image: string;
+  isFounder?: boolean;
 };
 
 function TeamMemberTrigger({
   member,
   image,
+  isFounder = false,
 }: {
   member: TeamMember;
   image: string;
+  isFounder?: boolean;
 }) {
   return (
     <button
       type="button"
-      className="group hover:border-primary/50 hover:shadow-primary/10 relative overflow-hidden rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950 p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl sm:p-8"
+      className={`group relative overflow-hidden rounded-2xl border p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl sm:p-8 ${
+        isFounder
+          ? "border-primary/30 from-primary/5 to-secondary/5 hover:border-primary/60 hover:shadow-primary/20 bg-gradient-to-br"
+          : "hover:border-primary/50 hover:shadow-primary/10 border-zinc-800 bg-gradient-to-br from-zinc-900 to-zinc-950"
+      }`}
     >
       {/* Animated background gradient */}
-      <div className="from-primary/5 to-secondary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div
+        className={`absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 ${
+          isFounder
+            ? "from-primary/10 to-secondary/10"
+            : "from-primary/5 to-secondary/5"
+        }`}
+      />
 
       {/* Content */}
       <div className="relative flex flex-col items-center">
@@ -61,7 +73,11 @@ function TeamMemberTrigger({
         </h3>
 
         {/* Position */}
-        <p className="text-muted-foreground mb-3 text-sm font-semibold sm:text-base">
+        <p
+          className={`mb-3 text-sm font-semibold sm:text-base ${
+            isFounder ? "text-primary" : "text-muted-foreground"
+          }`}
+        >
           {member.position}
         </p>
 
@@ -74,11 +90,19 @@ function TeamMemberTrigger({
   );
 }
 
-export default function TeamMemberCard({ member, image }: TeamMemberCardProps) {
+export default function TeamMemberCard({
+  member,
+  image,
+  isFounder = false,
+}: TeamMemberCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <TeamMemberTrigger member={member} image={image} />
+        <TeamMemberTrigger
+          member={member}
+          image={image}
+          isFounder={isFounder}
+        />
       </DialogTrigger>
 
       <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto border-zinc-800 bg-zinc-950 text-white">
