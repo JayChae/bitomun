@@ -131,7 +131,7 @@ export default async function DevelopmentPage({ params }: Props) {
         buttonLink="/development/layer1/libraries-sdks"
         buttonText={t("resources.layer1.exploreAll")}
         icon={Bitcoin}
-        className="from-secondary/10 bg-gradient-to-r to-transparent"
+        className="bg-gradient-to-r from-orange-500/10 to-transparent"
       />
 
       {/* Layer2 Resources Section */}

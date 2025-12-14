@@ -133,17 +133,39 @@ export default async function Page({ params }: Props) {
 
 **cn() 함수 사용** (필수)
 
+**중요: 조건부 스타일링이나 변수로 className을 구분할 때는 반드시 cn() 함수를 사용해야 합니다.**
+
 ```typescript
 import { cn } from "@/lib/utils";
 
-// 조건부 스타일링
+// ✅ 올바른 방법 - cn() 함수 사용
 <div className={cn(
   "border-border bg-card/50 relative h-full",
   "hover:scale-[1.02] hover:shadow-xl",
   isActive && "border-primary",
   className // props로 받은 추가 클래스
 )} />
+
+// ✅ 조건부 스타일링 - cn() 사용
+<div className={cn(
+  "absolute inset-0 transition-colors",
+  isBitcoin
+    ? "bg-gradient-to-br from-orange-500/10"
+    : "bg-gradient-to-br from-yellow-500/10"
+)} />
+
+// ❌ 잘못된 방법 - 템플릿 리터럴 직접 사용 (절대 사용 금지)
+<div className={`absolute inset-0 transition-colors ${
+  isBitcoin ? "bg-orange-500" : "bg-yellow-500"
+}`} />
 ```
+
+**cn() 함수를 사용해야 하는 경우:**
+
+- 조건부 스타일링 (삼항 연산자, && 연산자 등)
+- props로 className을 받아 병합할 때
+- 변수로 스타일을 구분해야 할 때
+- 동적으로 클래스를 추가/제거할 때
 
 ### 6. 다국어 처리 (next-intl)
 

@@ -1,7 +1,6 @@
 import {
   ArrowRight,
   Bitcoin,
-  BookOpen,
   Mail,
   Monitor,
   School,
@@ -59,25 +58,48 @@ export default async function Home({ params }: Props) {
       <Section
         title={t("development.title")}
         description={t("development.description")}
-        className="from-secondary/10 bg-gradient-to-r to-transparent"
+        className=""
       >
-        <ul className="flex flex-wrap justify-center gap-4">
-          {DEV_RESOURCES.map((resource) => {
+        <ul className="flex flex-wrap justify-center gap-6">
+          {DEV_RESOURCES.map((resource, index) => {
             const Icon = resource.icon;
+            const isBitcoin = index === 0;
             return (
               <li key={resource.id}>
                 <Link href={resource.link} locale={locale}>
-                  <Card className="hover:border-primary/50 h-full w-full max-w-2xs cursor-pointer gap-4 text-center transition-colors sm:gap-6">
-                    <CardHeader>
-                      <Icon className="text-primary mx-auto mb-2 size-10 sm:size-12 lg:size-14" />
-                      <CardTitle>{t(resource.title)}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription>
+                  <div
+                    className={cn(
+                      "group bg-card text-card-foreground relative w-full max-w-xs cursor-pointer overflow-hidden rounded-3xl border-2 p-8 text-center transition-all hover:scale-105 sm:max-w-sm sm:p-12",
+                      isBitcoin
+                        ? "hover:border-orange-500/50"
+                        : "hover:border-yellow-500/50",
+                    )}
+                  >
+                    {/* Content */}
+                    <div className="relative space-y-4">
+                      <div
+                        className={cn(
+                          "mx-auto inline-flex rounded-2xl p-6 transition-colors",
+                          isBitcoin
+                            ? "bg-orange-500/20 group-hover:bg-orange-500/30"
+                            : "bg-yellow-500/20 group-hover:bg-yellow-500/30",
+                        )}
+                      >
+                        <Icon
+                          className={cn(
+                            "size-12 sm:size-14",
+                            isBitcoin ? "text-orange-500" : "text-yellow-600",
+                          )}
+                        />
+                      </div>
+                      <h3 className="text-xl font-bold sm:text-2xl">
+                        {t(resource.title)}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
                         {t(resource.description)}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
+                      </p>
+                    </div>
+                  </div>
                 </Link>
               </li>
             );
