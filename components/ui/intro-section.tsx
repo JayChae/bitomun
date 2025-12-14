@@ -25,6 +25,25 @@ export default function IntroSection({ children }: { children: ReactNode }) {
   );
 }
 
+export function IntroTitle({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <h1
+      className={cn(
+        "from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl",
+        className,
+      )}
+    >
+      {children}
+    </h1>
+  );
+}
+
 export function IntroDescription({
   children,
   className,
