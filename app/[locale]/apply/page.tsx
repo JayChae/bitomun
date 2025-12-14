@@ -60,7 +60,7 @@ export default async function ApplyPage({ params }: Props) {
           <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-[clamp(3rem,8vw,6rem)] leading-[0.9] font-black tracking-tighter text-transparent">
             {t("hero.title")}
           </h1>
-          <p className="text-muted-foreground text-xl md:text-2xl">
+          <p className="text-muted-foreground text-lg md:text-xl">
             {t("hero.description")}
           </p>
         </div>

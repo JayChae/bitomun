@@ -28,7 +28,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, {
+  IntroDescription,
+  IntroTitle,
+} from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType, LucideIcon } from "@/types";
@@ -122,12 +125,8 @@ export default async function EducationPage({ params }: Props) {
     <div>
       <IntroSection>
         <div className="space-y-6">
-          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-            {t("hero.title")}
-          </h1>
-          <p className="text-muted-foreground text-lg sm:text-xl">
-            {t("hero.description")}
-          </p>
+          <IntroTitle>{t("hero.title")}</IntroTitle>
+          <IntroDescription>{t("hero.description")}</IntroDescription>
         </div>
       </IntroSection>
 
@@ -150,6 +149,7 @@ export default async function EducationPage({ params }: Props) {
       {/* Education Resources Section */}
       <DevSection
         title={t("sections.development.title")}
+        description={t("sections.development.description")}
         resources={educationDevResources}
         buttonLink="education/development/guides-tutorials"
         buttonText={t("sections.development.buttonText")}
@@ -230,14 +230,17 @@ function Section({
 }: SectionProps) {
   const Icon = icon;
   return (
-    <section id={id} className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
+    <section
+      id={id}
+      className={cn("scroll-mt-15 px-4 py-24 sm:px-6 lg:px-8", className)}
+    >
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex items-center justify-center gap-3">
             {Icon && <Icon className="text-primary size-8" />}
             <h2 className="text-3xl font-bold">{title}</h2>
           </div>
-          <span>{description}</span>
+          <span className="text-center">{description}</span>
         </div>
         {children}
       </div>
@@ -469,6 +472,7 @@ type Resource = {
 
 type DevSectionProps = {
   title: string;
+  description?: string;
   resources: Resource[];
   buttonLink: string;
   buttonText: string;
@@ -478,6 +482,7 @@ type DevSectionProps = {
 
 function DevSection({
   title,
+  description,
   resources,
   buttonLink,
   buttonText,
@@ -488,9 +493,12 @@ function DevSection({
   return (
     <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-12">
-        <div className="flex w-full items-center justify-center gap-3">
-          <Icon className="text-primary size-8" />
-          <h2 className="text-3xl font-bold">{title}</h2>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-3">
+            <Icon className="text-primary size-8" />
+            <h2 className="text-3xl font-bold">{title}</h2>
+          </div>
+          {description && <span className="text-center">{description}</span>}
         </div>
 
         <div className="mx-auto flex flex-wrap justify-center gap-6">

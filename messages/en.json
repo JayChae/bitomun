@@ -145,7 +145,7 @@
   },
   "development": {
     "title": "Development Resources",
-    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem",
+    "description": "A professional technical resource platform designed for developers researching and building Bitcoin and Lightning Network-based technology.",
     "developmentLinks": {
       "layer1": "Layer1",
       "layer2": "Layer2",
@@ -165,8 +165,8 @@
             "description": "Tools and platforms for easy integration of Bitcoin payments in applications"
           },
           "utilities": {
-            "title": "Utilities",
-            "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification"
+            "title": "Wallets",
+            "description": "Various software and hardware wallet solutions for securely storing and managing Bitcoin"
           },
           "research": {
             "title": "Research",
@@ -183,16 +183,16 @@
             "description": "Libraries and development kits for building Lightning Network applications"
           },
           "lspsEnterprise": {
-            "title": "LSPs",
-            "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network"
+            "title": "APIs & Payments",
+            "description": "Tools and platforms for easy integration of Lightning Network payments in applications"
           },
           "dashboardsMonitoring": {
-            "title": "Monitoring",
-            "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes"
+            "title": "Wallets",
+            "description": "Various wallet solutions supporting Lightning Network for fast payments experience"
           },
           "routingLiquidity": {
-            "title": "Routing",
-            "description": "Tools and services focused on managing payment routing and Lightning channel liquidity"
+            "title": "Research",
+            "description": "Explore academic papers, technical research, and whitepapers related to Lightning Network"
           }
         }
       },
@@ -357,8 +357,7 @@
         "specter": {
           "name": "Specter",
           "position": "Founder",
-          "role": "Bitcoin Developer & Educator",
-          "bio": "Bitcoin educator and developer passionate about spreading Bitcoin knowledge through education and open-source development.\n\n• 🇰🇷 Bitcoin Dev Intern\n• @Bitcoinminiconf Host\n• @BTCSocialLayer Co-founder\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book Author",
+          "bio": "Bitomun Founder & Mini Conference Host\n\nKey Activities:\n• @Bitcoinminiconf Host\n• @BTCSocialLayer Co-founder\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book Author• Bitcoin Dev Intern\n",
           "expertise": [
             "Bitcoin Core",
             "Lightning Network",
@@ -372,13 +371,32 @@
         },
         "calvin": {
           "name": "Calvin",
-          "position": "Adviser",
-          "role": "Bitcoin Developer & Researcher",
-          "bio": "👋 Hi I'm Calvin 👋\nI am an open source developer based in Seoul that works on scaling Bitcoin.\n\nNowadays I'm usually:\n• Working on utreexod, a Bitcoin full node with Utreexo accumulators\n• Working on utreexo, a dynamic hash-based accumulator for Bitcoin\n• Working on btcd, a bitcoin implementation in Go\n• Mentoring next gen of Bitcoin devs with the Asia Bitcoin Dev Internship\n• Being a water deer",
+          "position": "Advisor",
+          "bio": "Open-source developer based in Seoul, focusing on Bitcoin scalability\n\nKey Activities:\n• Working on utreexod - Bitcoin full node with Utreexo accumulators\n• Working on utreexo - Dynamic hash-based accumulator for Bitcoin\n• Working on btcd - Bitcoin implementation in Go\n• Mentoring next generation of Bitcoin developers through Asia Bitcoin Dev Internship\n",
           "expertise": ["Utreexo", "Bitcoin Core", "Go", "Mentorship"],
           "social": {
             "twitter": "https://x.com/kcalvinalvinn",
             "github": "https://github.com/kcalvinalvin"
+          }
+        },
+        "mineey": {
+          "name": "Mineey",
+          "position": "Art Director",
+          "bio": "Art Director for Bitcoin Mini Conference\n\nKey Activities:\n• Bitcoin Mini Conference Art Director\n• @SaturdayBlock Co-founder\n",
+          "expertise": ["Art Direction", "Design", "Branding"],
+          "social": {
+            "twitter": "https://x.com/mineey_2100",
+            "github": ""
+          }
+        },
+        "ivar": {
+          "name": "Ivar",
+          "position": "Web Developer",
+          "bio": "Web Developer for Bitomun and Bitcoin Mini Conference\n\nKey Activities:\n• Bitcoin Mini Conference Web Developer\n• Bitomun Web Developer\n",
+          "expertise": ["Web Development", "Next.js", "TypeScript"],
+          "social": {
+            "twitter": "https://x.com/IvarChae",
+            "github": ""
           }
         }
       }
@@ -441,7 +459,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "Join the Bitcoin ecosystem"
+      "description": "An official application and participation gateway to help you realize your ideas and passion"
     },
     "categories": {
       "internship": {
@@ -452,7 +470,7 @@
       "sponsorship": {
         "title": "Apply for Funding",
         "subtitle": "Funding Application",
-        "description": "Apply for funding for your Bitcoin education project and grow together"
+        "description": "Apply for funding for Bitcoin education and industry expansion activities"
       },
       "other": {
         "title": "Other Inquiries",
@@ -501,7 +519,7 @@
   },
   "global": {
     "title": "Global Communities",
-    "description": "Explore Bitcoin centers, organizations, and communities across all continents. Connect with Bitcoiners worldwide and discover local meetups, educational initiatives, and development hubs",
+    "description": "A global hub connecting Bitcoin communities and networks worldwide, including Korea. By sharing and collaborating on Bitcoin philosophy and technology across borders, languages, and cultures, we aim to build a broader-scale ecosystem",
     "continentLinks": {
       "asia": "Asia",
       "europe": "Europe",
@@ -650,6 +668,7 @@
       },
       "development": {
         "title": "Development Education Resource",
+        "description": "A professional educational platform centered on Bitcoin and Lightning Network technology, designed for everyone from beginners to advanced developers and builders",
         "buttonText": "View More +3"
       },
       "consulting": {
@@ -717,19 +736,19 @@
     "devResources": {
       "guidesTutorials": {
         "title": "Guides & Tutorials",
-        "description": "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development."
+        "description": "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development"
       },
       "classesCourses": {
         "title": "Classes & Courses",
-        "description": "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development."
+        "description": "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development"
       },
       "certifications": {
         "title": "Developer Certifications",
-        "description": "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development."
+        "description": "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development"
       },
       "books": {
         "title": "Developer Books",
-        "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references."
+        "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references"
       }
     }
   },

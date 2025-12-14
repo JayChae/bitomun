@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { cn } from "@/lib/utils";
+
 import BackgroundDecoration from "./background-decoration";
 import Logo from "./logo";
 
@@ -20,5 +22,43 @@ export default function IntroSection({ children }: { children: ReactNode }) {
         </div>
       </div>
     </section>
+  );
+}
+
+export function IntroTitle({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <h1
+      className={cn(
+        "from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl",
+        className,
+      )}
+    >
+      {children}
+    </h1>
+  );
+}
+
+export function IntroDescription({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <p
+      className={cn(
+        "text-muted-foreground mx-auto max-w-4xl text-lg leading-relaxed font-light md:text-xl",
+        className,
+      )}
+    >
+      {children}
+    </p>
   );
 }

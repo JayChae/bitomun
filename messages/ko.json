@@ -146,7 +146,7 @@
   },
   "development": {
     "title": "Development Resources",
-    "description": "개발자, 학습자, 빌더들을 위한 선별된 비트코인, 라이트닝 네트워크, 그리고 교육 자료",
+    "description": "비트코인과 라이트닝 네트워크 기술을 연구하고 구축하는 개발자를 위해 설계된 기술 리소스 플랫폼입니다.",
     "developmentLinks": {
       "layer1": "Layer1",
       "layer2": "Layer2",
@@ -166,8 +166,8 @@
             "description": "애플리케이션에서 비트코인 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "utilities": {
-            "title": "유틸리티",
-            "description": "트랜잭션 시뮬레이션, 스크립트 탐색, 블록체인 시각화, 코드 무결성 검증 등 다양한 도구 모음입니다"
+            "title": "지갑",
+            "description": "비트코인을 안전하게 보관하고 관리할 수 있는 다양한 소프트웨어 및 하드웨어 지갑 솔루션입니다"
           },
           "research": {
             "title": "연구 자료",
@@ -184,16 +184,16 @@
             "description": "라이트닝 네트워크 애플리케이션을 구축하기 위한 라이브러리와 개발 도구 키트입니다"
           },
           "lspsEnterprise": {
-            "title": "LSP",
-            "description": "라이트닝 네트워크를 활용하려는 기업을 위한 엔터프라이즈급 도구와 서비스입니다"
+            "title": "API & 결제",
+            "description": "애플리케이션에서 라이트닝 네트워크 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "dashboardsMonitoring": {
-            "title": "모니터링",
-            "description": "라이트닝 네트워크 노드의 관리 및 모니터링을 위한 웹 기반 및 텍스트 기반 인터페이스입니다"
+            "title": "지갑",
+            "description": "라이트닝 네트워크를 지원하는 다양한 지갑 솔루션으로 빠른 결제를 경험할 수 있습니다"
           },
           "routingLiquidity": {
-            "title": "라우팅",
-            "description": "결제 라우팅 관리와 라이트닝 채널의 유동성 관리에 중점을 둔 도구와 서비스입니다"
+            "title": "연구 자료",
+            "description": "라이트닝 네트워크와 관련된 논문, 기술 연구, 백서 등을 탐색하세요"
           }
         }
       },
@@ -359,8 +359,7 @@
         "specter": {
           "name": "스펙터",
           "position": "Founder",
-          "role": "비토문 창립자 & 미니 컨퍼런스 호스트",
-          "bio": "• 🇰🇷 Bitcoin Dev Intern\n• @Bitcoinminiconf 호스트\n• @BTCSocialLayer 공동창립자\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book 저자",
+          "bio": "비토문 창립자 & 미니 컨퍼런스 호스트\n\n주요 활동:\n• @Bitcoinminiconf 호스트\n• @BTCSocialLayer 공동창립자\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book 저자• Bitcoin Dev Intern\n",
           "expertise": [
             "비트코인 코어",
             "라이트닝 네트워크",
@@ -375,12 +374,31 @@
         "calvin": {
           "name": "캘빈",
           "position": "Advisor",
-          "role": "비트코인 개발자 & 연구원",
           "bio": "서울을 기반으로 비트코인 확장성에 집중하는 오픈소스 개발자\n\n주요 활동:\n• utreexod 작업 - Utreexo 어큐뮬레이터를 사용한 비트코인 풀노드\n• utreexo 작업 - 비트코인을 위한 동적 해시 기반 어큐뮬레이터\n• btcd 작업 - Go로 구현한 비트코인\n• Asia Bitcoin Dev Internship을 통한 차세대 비트코인 개발자 멘토링\n",
           "expertise": ["Utreexo", "비트코인 코어", "Go", "멘토십"],
           "social": {
             "twitter": "https://x.com/kcalvinalvinn",
             "github": "https://github.com/kcalvinalvin"
+          }
+        },
+        "mineey": {
+          "name": "미니",
+          "position": "Art Director",
+          "bio": "미니컨퍼런스 아트 디렉터\n\n주요 활동:\n• 미니컨퍼런스 아트 디렉터\n• @SaturdayBlock 공동 창립자\n",
+          "expertise": ["Art Direction", "Design", "Branding"],
+          "social": {
+            "twitter": "https://x.com/mineey_2100",
+            "github": ""
+          }
+        },
+        "ivar": {
+          "name": "아이바",
+          "position": "Web Developer",
+          "bio": "비토문/미니컨퍼런스의 웹 개발자\n\n주요 활동:\n• 미니컨퍼런스 웹 개발\n• 비토문 웹 개발\n",
+          "expertise": ["Web Development", "Next.js", "TypeScript"],
+          "social": {
+            "twitter": "https://x.com/IvarChae",
+            "github": "https://github.com/JayChae"
           }
         }
       }
@@ -443,7 +461,7 @@
   "apply": {
     "hero": {
       "title": "APPLY",
-      "description": "비트코인 네트워크에 참여할 수 있도록 다양한 프로그램에 신청하세요. 인턴십, 펀딩 신청 그 외에 다양한 제안서를 보내세요"
+      "description": "여러분이 가진 아이디어와 열정을 실현할 수 있도록 돕는 공식 신청 및 참여 창구입니다"
     },
     "categories": {
       "internship": {
@@ -454,7 +472,7 @@
       "sponsorship": {
         "title": "펀딩 신청",
         "subtitle": "Apply for Funding",
-        "description": "비트코인 교육 프로젝트를 위한 펀딩을 받아보세요"
+        "description": "비트코인 교육과 산업 확대 활동을 위한 자금을 신청하세요"
       },
       "other": {
         "title": "기타 사항",
@@ -503,7 +521,7 @@
   },
   "global": {
     "title": "Global Communities",
-    "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요. 전 세계 비트코이너들과 연결하고 지역 밋업, 교육 이니셔티브, 개발 허브를 발견하세요",
+    "description": "한국을 비롯한 전 세계 비트코인 커뮤니티와 네트워크를 연결하는 글로벌 허브입니다. 국경, 언어, 문화의 벽을 넘어 비트코인 철학과 기술을 공유하고 협력함으로써, 더 넓은 스케일의 생태계 구축을 목표로 합니다",
     "continentLinks": {
       "asia": "아시아",
       "europe": "유럽",
@@ -676,6 +694,7 @@
       },
       "development": {
         "title": "개발 교육 자료",
+        "description": "비트코인과 라이트닝 네트워크 기술을 중심으로, 초보자부터 고급 개발자 및 빌더까지 아우르는 전문 교육 플랫폼입니다",
         "buttonText": "더보기 +3"
       },
       "consulting": {
@@ -743,19 +762,19 @@
     "devResources": {
       "guidesTutorials": {
         "title": "가이드 & 튜토리얼",
-        "description": "비트코인 및 라이트닝 네트워크 개발과 관련된 특정 주제에 대한 단계별 지침을 제공하는 텍스트 또는 비디오 기반 교육 자료입니다."
+        "description": "비트코인 및 라이트닝 네트워크 개발과 관련된 특정 주제에 대한 단계별 지침을 제공하는 텍스트 또는 비디오 기반 교육 자료입니다"
       },
       "classesCourses": {
         "title": "수업 & 코스",
-        "description": "비트코인 및 라이트닝 네트워크 개발의 다양한 측면을 다루는 구조화된 커리큘럼을 제공하는 온라인 또는 오프라인 정규 교육 프로그램입니다."
+        "description": "비트코인 및 라이트닝 네트워크 개발의 다양한 측면을 다루는 구조화된 커리큘럼을 제공하는 온라인 또는 오프라인 정규 교육 프로그램입니다"
       },
       "certifications": {
         "title": "개발자 인증",
-        "description": "시험을 통해 개발자의 기술과 지식을 평가하여 비트코인 및 라이트닝 네트워크 개발 능력을 검증하는 인증을 발급하는 프로그램입니다."
+        "description": "시험을 통해 개발자의 기술과 지식을 평가하여 비트코인 및 라이트닝 네트워크 개발 능력을 검증하는 인증을 발급하는 프로그램입니다"
       },
       "books": {
         "title": "개발자 서적",
-        "description": "비트코인 및 라이트닝 네트워크 개발의 다양한 영역에 대한 심층 정보와 통찰력을 제공하며 종종 포괄적인 참고 자료로 사용되는 출판 서적입니다."
+        "description": "비트코인 및 라이트닝 네트워크 개발의 다양한 영역에 대한 심층 정보와 통찰력을 제공하며 종종 포괄적인 참고 자료로 사용되는 출판 서적입니다"
       }
     }
   }

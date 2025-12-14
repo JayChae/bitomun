@@ -2,14 +2,10 @@ import {
   ArrowRight,
   BanknoteArrowDown,
   Bitcoin,
-  Building2,
-  ChartNetwork,
-  CodeXml,
   FlaskConical,
   LucideIcon,
-  Pickaxe,
-  Route,
   ToolCase,
+  Wallet,
   Zap,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -22,7 +18,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import IntroSection from "@/components/ui/intro-section";
+import IntroSection, {
+  IntroDescription,
+  IntroTitle,
+} from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -61,7 +60,7 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer1.items.librariesSdks.title"),
       description: t("resources.layer1.items.librariesSdks.description"),
-      icon: CodeXml,
+      icon: ToolCase,
       link: "/development/layer1/libraries-sdks",
     },
     {
@@ -73,7 +72,7 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer1.items.utilities.title"),
       description: t("resources.layer1.items.utilities.description"),
-      icon: Pickaxe,
+      icon: Wallet,
       link: "/development/layer1/utilities",
     },
     {
@@ -95,19 +94,19 @@ export default async function DevelopmentPage({ params }: Props) {
     {
       title: t("resources.layer2.items.lspsEnterprise.title"),
       description: t("resources.layer2.items.lspsEnterprise.description"),
-      icon: Building2,
+      icon: BanknoteArrowDown,
       link: "/development/layer2/lsps-enterprise",
     },
     {
       title: t("resources.layer2.items.dashboardsMonitoring.title"),
       description: t("resources.layer2.items.dashboardsMonitoring.description"),
-      icon: ChartNetwork,
+      icon: Wallet,
       link: "/development/layer2/dashboards-monitoring",
     },
     {
       title: t("resources.layer2.items.routingLiquidity.title"),
       description: t("resources.layer2.items.routingLiquidity.description"),
-      icon: Route,
+      icon: FlaskConical,
       link: "/development/layer2/routing-liquidity",
     },
   ];
@@ -116,12 +115,8 @@ export default async function DevelopmentPage({ params }: Props) {
     <div className="relative">
       <IntroSection>
         <div className="space-y-6">
-          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-            {t("title")}
-          </h1>
-          <p className="text-muted-foreground text-base sm:text-lg">
-            {t("description")}
-          </p>
+          <IntroTitle>{t("title")}</IntroTitle>
+          <IntroDescription>{t("description")}</IntroDescription>
           <DevelopmentLinks
             className="mt-12"
             developmentLinks={developmentLinks}
@@ -136,7 +131,7 @@ export default async function DevelopmentPage({ params }: Props) {
         buttonLink="/development/layer1/libraries-sdks"
         buttonText={t("resources.layer1.exploreAll")}
         icon={Bitcoin}
-        className="from-secondary/10 bg-gradient-to-r to-transparent"
+        className="bg-gradient-to-r from-orange-500/10 to-transparent"
       />
 
       {/* Layer2 Resources Section */}
