@@ -357,8 +357,7 @@
         "specter": {
           "name": "Specter",
           "position": "Founder",
-          "role": "Bitcoin Developer & Educator",
-          "bio": "Bitcoin educator and developer passionate about spreading Bitcoin knowledge through education and open-source development.\n\n• 🇰🇷 Bitcoin Dev Intern\n• @Bitcoinminiconf Host\n• @BTCSocialLayer Co-founder\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book Author",
+          "bio": "Bitomun Founder & Mini Conference Host\n\nKey Activities:\n• @Bitcoinminiconf Host\n• @BTCSocialLayer Co-founder\n• Bitcoin Enlightenment Activist\n• Bitcoin Mini Book Author• Bitcoin Dev Intern\n",
           "expertise": [
             "Bitcoin Core",
             "Lightning Network",
@@ -372,9 +371,8 @@
         },
         "calvin": {
           "name": "Calvin",
-          "position": "Adviser",
-          "role": "Bitcoin Developer & Researcher",
-          "bio": "👋 Hi I'm Calvin 👋\nI am an open source developer based in Seoul that works on scaling Bitcoin.\n\nNowadays I'm usually:\n• Working on utreexod, a Bitcoin full node with Utreexo accumulators\n• Working on utreexo, a dynamic hash-based accumulator for Bitcoin\n• Working on btcd, a bitcoin implementation in Go\n• Mentoring next gen of Bitcoin devs with the Asia Bitcoin Dev Internship\n• Being a water deer",
+          "position": "Advisor",
+          "bio": "Open-source developer based in Seoul, focusing on Bitcoin scalability\n\nKey Activities:\n• Working on utreexod - Bitcoin full node with Utreexo accumulators\n• Working on utreexo - Dynamic hash-based accumulator for Bitcoin\n• Working on btcd - Bitcoin implementation in Go\n• Mentoring next generation of Bitcoin developers through Asia Bitcoin Dev Internship\n",
           "expertise": ["Utreexo", "Bitcoin Core", "Go", "Mentorship"],
           "social": {
             "twitter": "https://x.com/kcalvinalvinn",

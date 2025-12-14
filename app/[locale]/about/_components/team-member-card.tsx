@@ -12,7 +12,6 @@ import {
 type TeamMember = {
   name: string;
   position: string;
-  role: string;
   bio: string;
   expertise: string[];
   social: {
@@ -84,7 +83,7 @@ export default function TeamMemberCard({ member, image }: TeamMemberCardProps) {
 
       <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto border-zinc-800 bg-zinc-950 text-white">
         {/* Header Section */}
-        <DialogHeader className="border-b border-zinc-800 pb-6">
+        <DialogHeader className="">
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start sm:gap-6 sm:text-left">
             {/* Profile Image */}
             <div className="border-primary/50 relative size-24 shrink-0 overflow-hidden rounded-full border-2 sm:size-28">
@@ -101,12 +100,9 @@ export default function TeamMemberCard({ member, image }: TeamMemberCardProps) {
               <DialogTitle className="mb-2 text-2xl font-bold sm:text-3xl">
                 {member.name}
               </DialogTitle>
-              <div className="text-primary mb-1 text-base font-semibold sm:text-lg">
+              <div className="text-primary text-base font-semibold sm:text-lg">
                 {member.position}
               </div>
-              <DialogDescription className="text-sm text-gray-400 sm:text-base">
-                {member.role}
-              </DialogDescription>
             </div>
           </div>
         </DialogHeader>

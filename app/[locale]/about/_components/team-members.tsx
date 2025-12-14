@@ -8,7 +8,6 @@ export default async function TeamMembers() {
   const specter = {
     name: t("team.members.specter.name"),
     position: t("team.members.specter.position"),
-    role: t("team.members.specter.role"),
     bio: t("team.members.specter.bio"),
     expertise: t.raw("team.members.specter.expertise") as string[],
     social: t.raw("team.members.specter.social") as {
@@ -20,7 +19,6 @@ export default async function TeamMembers() {
   const calvin = {
     name: t("team.members.calvin.name"),
     position: t("team.members.calvin.position"),
-    role: t("team.members.calvin.role"),
     bio: t("team.members.calvin.bio"),
     expertise: t.raw("team.members.calvin.expertise") as string[],
     social: t.raw("team.members.calvin.social") as {
