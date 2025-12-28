@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { LanguageType, LocaleType } from "@/types/intl";
 
 import SubscribeModal from "./forms/subscribe-modal";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -97,13 +98,26 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    size="icon"
-                    className="text-muted-foreground"
+                    size="sm"
+                    className="text-muted-foreground gap-2"
                   >
-                    <Languages className="h-5 w-5" />
+                    <Avatar className="h-5 w-5 rounded-full">
+                      <AvatarImage
+                        src={
+                          locale === "en"
+                            ? "https://flagcdn.com/us.svg"
+                            : "https://flagcdn.com/kr.svg"
+                        }
+                        alt={locale === "en" ? "English" : "한국어"}
+                        className="object-cover"
+                      />
+                    </Avatar>
+                    <span className="text-sm font-medium">
+                      {locale === "en" ? "English" : "한국어"}
+                    </span>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="min-w-[6rem]">
                   {languages.map((lang) => (
                     <Link
                       key={lang.code}
