@@ -20,16 +20,17 @@ import {
 import Logo from "./ui/logo";
 
 const links = [
-  { href: "/about", label: "About Us" },
-  { href: "/development", label: "Development" },
-  { href: "/education", label: "Education" },
-  { href: "/global", label: "Global" },
-  { href: "/apply", label: "Apply" },
+  { href: "/about", key: "about" },
+  { href: "/development", key: "development" },
+  { href: "/education", key: "education" },
+  { href: "/global", key: "global" },
+  { href: "/apply", key: "apply" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
   const withoutLocale = pathname.split("/").slice(2).join("/");
   const t = useTranslations("subscribe");
+  const tHeader = useTranslations("header.menu");
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -66,7 +67,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                       : "text-muted-foreground",
                   )}
                 >
-                  {link.label}
+                  {tHeader(link.key)}
                 </Link>
               </li>
             ))}
@@ -77,7 +78,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 rel="noopener noreferrer"
                 className="hover:text-primary text-muted-foreground size-fit text-sm font-medium transition-colors"
               >
-                Conference
+                {tHeader("conference")}
               </Link>
             </li>
             <li>
@@ -161,7 +162,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                         : "text-muted-foreground",
                     )}
                   >
-                    {link.label}
+                    {tHeader(link.key)}
                   </Link>
                 </li>
               ))}
@@ -172,7 +173,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   rel="noopener noreferrer"
                   className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black"
                 >
-                  Conference
+                  {tHeader("conference")}
                 </Link>
               </li>
 

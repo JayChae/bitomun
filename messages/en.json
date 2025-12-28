@@ -755,6 +755,16 @@
       }
     }
   },
+  "header": {
+    "menu": {
+      "about": "About Us",
+      "development": "Development",
+      "education": "Education",
+      "global": "Global",
+      "apply": "Apply",
+      "conference": "Conference"
+    }
+  },
   "subscribe": {
     "button": "Subscribe",
     "title": "Subscribe to Bitomun",

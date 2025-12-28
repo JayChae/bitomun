@@ -642,6 +642,16 @@
       "new-zealand": "뉴질랜드"
     }
   },
+  "header": {
+    "menu": {
+      "about": "소개",
+      "development": "개발",
+      "education": "교육",
+      "global": "글로벌",
+      "apply": "신청",
+      "conference": "컨퍼런스"
+    }
+  },
   "subscribe": {
     "button": "구독하기",
     "title": "Bitomun 구독",
