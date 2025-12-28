@@ -11,7 +11,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
-import SubscribeModal from "@/components/subscribe-modal";
+import SubscribeModal from "@/components/forms-modal/subscribe-modal";
 import BackgroundDecoration from "@/components/ui/background-decoration";
 import { Button } from "@/components/ui/button";
 import {

@@ -11,7 +11,7 @@ import {
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
-import { ConsultingForm } from "@/components/consulting-form";
+import { ConsultingDialog } from "@/components/forms-modal/consulting/consulting-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -44,6 +44,10 @@ export default async function EducationPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "educationPage" });
+  const tForm = await getTranslations({
+    locale,
+    namespace: "consultingForm",
+  });
 
   const levels = [
     {
@@ -143,6 +147,7 @@ export default async function EducationPage({ params }: Props) {
           buttonText={t("sections.consulting.buttonText")}
           dialogTitle={t("sections.consulting.dialogTitle")}
           dialogDescription={t("sections.consulting.dialogDescription")}
+          successMessage={tForm("success")}
         />
       </Section>
 
@@ -417,6 +422,7 @@ type OneOnOneConsultingProps = {
   buttonText: string;
   dialogTitle: string;
   dialogDescription: string;
+  successMessage: string;
 };
 
 function OneOnOneConsulting({
@@ -425,6 +431,7 @@ function OneOnOneConsulting({
   buttonText,
   dialogTitle,
   dialogDescription,
+  successMessage,
 }: OneOnOneConsultingProps) {
   return (
     <div className="flex w-full max-w-2xl flex-col items-center gap-4">
@@ -440,25 +447,12 @@ function OneOnOneConsulting({
           </div>
         </CardHeader>
       </Card>
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary h-9 px-6 text-sm hover:text-white md:h-12 md:px-16 md:text-base"
-          >
-            {buttonText}
-          </Button>
-        </DialogTrigger>
-        <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-[500px]">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">{dialogTitle}</DialogTitle>
-            <DialogDescription className="text-base leading-relaxed">
-              {dialogDescription}
-            </DialogDescription>
-          </DialogHeader>
-          <ConsultingForm />
-        </DialogContent>
-      </Dialog>
+      <ConsultingDialog
+        buttonText={buttonText}
+        dialogTitle={dialogTitle}
+        dialogDescription={dialogDescription}
+        successMessage={successMessage}
+      />
     </div>
   );
 }
