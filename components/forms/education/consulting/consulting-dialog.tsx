@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 
-import { ConsultingForm } from "@/components/forms-modal/consulting/consulting-form";
+import { ConsultingForm } from "@/components/forms/education/consulting/consulting-form";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,

@@ -1,11 +1,10 @@
 import { MessageSquare } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import OtherForm from "@/components/forms/apply/other-form";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types";
-
-import OtherForm from "./_components/other-form";
 
 type Props = {
   params: Promise<{ locale: LocaleType }>;

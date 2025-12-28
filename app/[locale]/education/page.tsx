@@ -11,7 +11,7 @@ import {
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
-import { ConsultingDialog } from "@/components/forms-modal/consulting/consulting-dialog";
+import { ConsultingDialog } from "@/components/forms/education/consulting/consulting-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Card,

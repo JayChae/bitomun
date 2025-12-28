@@ -9,7 +9,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LanguageType, LocaleType } from "@/types/intl";
 
-import SubscribeModal from "./forms-modal/subscribe-modal";
+import SubscribeModal from "./forms/subscribe-modal";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
