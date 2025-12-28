@@ -515,7 +515,9 @@
       "messageInternship": "Motivation & Introduction",
       "messageSponsorship": "Funding Application Reason & Project Description",
       "messageOther": "Inquiry Details",
-      "messagePlaceholder": "Please provide details..."
+      "messagePlaceholder": "Please provide details...",
+      "submit": "Submit",
+      "submitting": "Submitting..."
     }
   },
   "global": {

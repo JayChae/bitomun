@@ -493,7 +493,7 @@
       "submit": "제출하기",
       "comingSoon": "준비 중",
       "submitted": {
-        "title": "신청이 완료되었습니다!",
+        "title": "접수가 완료되었습니다!",
         "description": "빠른 시일 내에 연락드리겠습니다."
       }
     },
@@ -517,7 +517,9 @@
       "messageInternship": "지원 동기 및 자기소개",
       "messageSponsorship": "펀딩 신청 사유 및 프로젝트 설명",
       "messageOther": "문의 내용",
-      "messagePlaceholder": "자세히 작성해주세요..."
+      "messagePlaceholder": "자세히 작성해주세요...",
+      "submit": "제출하기",
+      "submitting": "제출 중..."
     }
   },
   "global": {

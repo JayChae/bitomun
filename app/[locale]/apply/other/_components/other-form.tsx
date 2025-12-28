@@ -2,7 +2,8 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,14 +12,52 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function OtherForm() {
   const t = useTranslations("apply");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/other-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        toast.error("문의 중 오류가 발생했습니다. 다시 시도해주세요.");
+      }
+    } catch (error) {
+      console.error("Error submitting other request:", error);
+      toast.error("문의 중 오류가 발생했습니다. 다시 시도해주세요.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { id, value } = e.target;
+    setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   if (submitted) {
@@ -53,6 +92,9 @@ export default function OtherForm() {
             id="name"
             placeholder={t("form.namePlaceholder")}
             required
+            value={formData.name}
+            onChange={handleChange}
+            disabled={isSubmitting}
             className="border-2"
           />
         </div>
@@ -64,6 +106,9 @@ export default function OtherForm() {
             type="email"
             placeholder={t("form.emailPlaceholder")}
             required
+            value={formData.email}
+            onChange={handleChange}
+            disabled={isSubmitting}
             className="border-2"
           />
         </div>
@@ -74,6 +119,9 @@ export default function OtherForm() {
             id="phone"
             type="tel"
             placeholder={t("form.phonePlaceholder")}
+            value={formData.phone}
+            onChange={handleChange}
+            disabled={isSubmitting}
             className="border-2"
           />
         </div>
@@ -85,6 +133,9 @@ export default function OtherForm() {
             placeholder={t("form.messagePlaceholder")}
             required
             rows={8}
+            value={formData.message}
+            onChange={handleChange}
+            disabled={isSubmitting}
             className="resize-none border-2"
           />
         </div>
@@ -92,10 +143,10 @@ export default function OtherForm() {
         <Button
           type="submit"
           size="lg"
-          disabled
+          disabled={isSubmitting}
           className="bg-foreground text-background hover:bg-foreground/90 h-14 w-full text-base font-bold"
         >
-          {t("common.comingSoon")}
+          {isSubmitting ? t("form.submitting") : t("form.submit")}
         </Button>
       </form>
     </div>
