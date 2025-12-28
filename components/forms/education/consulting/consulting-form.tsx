@@ -2,10 +2,15 @@
 
 import { useTranslations } from "next-intl";
 import { FormEvent, useState } from "react";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 
-export function ConsultingForm() {
+type ConsultingFormProps = {
+  onSuccess?: () => void;
+};
+
+export function ConsultingForm({ onSuccess }: ConsultingFormProps = {}) {
   const t = useTranslations("consultingForm");
   const [formData, setFormData] = useState({
     name: "",
@@ -24,7 +29,6 @@ export function ConsultingForm() {
     setSubmitStatus("idle");
 
     try {
-      // TODO: 실제 API 엔드포인트로 데이터 전송
       const response = await fetch("/api/consulting-request", {
         method: "POST",
         headers: {
@@ -36,12 +40,16 @@ export function ConsultingForm() {
       if (response.ok) {
         setSubmitStatus("success");
         setFormData({ name: "", phone: "", email: "", message: "" });
+        // 성공 시 콜백 호출 (모달 닫기 및 토스트 표시)
+        onSuccess?.();
       } else {
         setSubmitStatus("error");
+        toast.error(t("error"));
       }
     } catch (error) {
       console.error("Error submitting consultation request:", error);
       setSubmitStatus("error");
+      toast.error(t("error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -122,7 +130,7 @@ export function ConsultingForm() {
         />
       </div>
 
-      {submitStatus === "success" && (
+      {submitStatus === "success" && !onSuccess && (
         <div className="rounded-md bg-green-50 p-3 text-sm text-green-800 dark:bg-green-900/20 dark:text-green-400">
           {t("success")}
         </div>
@@ -138,9 +146,9 @@ export function ConsultingForm() {
         type="submit"
         className="w-full"
         size="lg"
-        disabled={true || isSubmitting}
+        disabled={isSubmitting}
       >
-        {t("submitButton")}
+        {isSubmitting ? t("submitting") : t("submitButton")}
       </Button>
     </form>
   );

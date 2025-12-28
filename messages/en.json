@@ -452,7 +452,8 @@
       }
     },
     "required": "*",
-    "submitButton": "Coming Soon",
+    "submitButton": "Submit Request",
+    "submitting": "Submitting...",
     "success": "Your consultation request has been successfully submitted. We will contact you soon",
     "error": "An error occurred while submitting your request. Please try again."
   },
@@ -514,7 +515,9 @@
       "messageInternship": "Motivation & Introduction",
       "messageSponsorship": "Funding Application Reason & Project Description",
       "messageOther": "Inquiry Details",
-      "messagePlaceholder": "Please provide details..."
+      "messagePlaceholder": "Please provide details...",
+      "submit": "Submit",
+      "submitting": "Submitting..."
     }
   },
   "global": {

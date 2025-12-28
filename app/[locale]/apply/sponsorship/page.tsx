@@ -1,12 +1,10 @@
-import { Bitcoin, Heart, Zap } from "lucide-react";
+import { Heart } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import SupportModal from "@/components/support-modals";
+import SponsorshipForm from "@/components/forms/apply/sponsorship-form";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types";
-
-import SponsorshipForm from "./_components/sponsorship-form";
 
 type Props = {
   params: Promise<{ locale: LocaleType }>;
