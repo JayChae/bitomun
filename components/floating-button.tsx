@@ -1,10 +1,12 @@
 "use client";
 
+import Lottie from "lottie-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import confettiAnimation from "@/public/lottie/Confetti-explode.json";
 
 export default function FloatingButton() {
   const t = useTranslations("footer");
@@ -65,7 +67,14 @@ export default function FloatingButton() {
           "shadow-lg hover:scale-105 hover:shadow-xl",
         )}
       >
-        <span className="relative z-10">{t("support.title")}</span>
+        <span className="relative z-10 flex items-center justify-center">
+          <Lottie
+            animationData={confettiAnimation}
+            loop={true}
+            className="absolute inset-0 h-full w-full scale-350"
+          />
+          <span className="relative z-10">{t("support.title")}</span>
+        </span>
         <span className="animate-shimmer absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
       </Link>
     </div>
