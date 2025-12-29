@@ -176,8 +176,12 @@ function Section({
           {resources.map((resource) => {
             const Icon = resource.icon;
             return (
-              <Link href={resource.link} key={resource.link}>
-                <Card className="bg-card border-border hover:border-primary/50 h-full w-full max-w-sm transition-colors">
+              <Link
+                href={resource.link}
+                key={resource.link}
+                className="w-full max-w-sm"
+              >
+                <Card className="bg-card border-border hover:border-primary/50 size-full transition-colors">
                   <CardHeader className="flex flex-col items-center text-center">
                     <Icon className="text-primary mb-2 size-8 sm:size-10" />
                     <CardTitle className="text-sm sm:text-lg">
@@ -185,7 +189,7 @@ function Section({
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <CardDescription className="text-xs sm:text-sm">
+                    <CardDescription className="text-xs whitespace-pre-line sm:text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardContent>
