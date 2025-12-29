@@ -419,6 +419,7 @@
     }
   },
   "supportModal": {
+    "title": "비토문에 후원하세요",
     "onchain": {
       "title": "온체인 후원",
       "description": "모든 금액은 개발자 양성, 자료 번역 및 관리, 행사 개최에 사용됩니다"

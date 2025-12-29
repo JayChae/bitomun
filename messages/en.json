@@ -417,6 +417,7 @@
     }
   },
   "supportModal": {
+    "title": "Support Bitomun",
     "onchain": {
       "title": "Onchain Support",
       "description": "All funds are used for developer training, material translation and management, and free events"

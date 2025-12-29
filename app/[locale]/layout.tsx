@@ -6,12 +6,14 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import FloatingButton from "@/components/floating-button";
 import Footer from "@/components/footer";
 import {
   EducationalOrganizationJsonLd,
   OrganizationJsonLd,
   WebsiteJsonLd,
 } from "@/components/json-ld";
+import Support from "@/components/support";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 
@@ -52,7 +54,9 @@ export default async function Layout({
           <Toaster position="top-center" />
           <Header locale={locale} />
           <main className="min-h-full min-w-full pt-16">{children}</main>
+          <Support />
           <Footer />
+          <FloatingButton />
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>
