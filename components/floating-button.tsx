@@ -1,6 +1,7 @@
 "use client";
 
 import Lottie from "lottie-react";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
@@ -9,6 +10,7 @@ import { cn } from "@/lib/utils";
 import confettiAnimation from "@/public/lottie/Confetti-explode.json";
 
 export default function FloatingButton() {
+  const pathname = usePathname();
   const t = useTranslations("footer");
   const [isVisible, setIsVisible] = useState(true);
 
@@ -47,6 +49,9 @@ export default function FloatingButton() {
       if (timeoutId) clearTimeout(timeoutId);
     };
   }, []);
+
+  // support 페이지에서는 표시하지 않음 (모든 hook 호출 이후에 체크)
+  if (pathname.includes("/support")) return null;
 
   return (
     <div

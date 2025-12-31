@@ -53,7 +53,7 @@ export default async function Layout({
         <NextIntlClientProvider locale={locale}>
           <Toaster position="top-center" />
           <Header locale={locale} />
-          <main className="min-h-full min-w-full pt-16">{children}</main>
+          <main className="min-w-full pt-16">{children}</main>
           <Support />
           <Footer />
           <FloatingButton />

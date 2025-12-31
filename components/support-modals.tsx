@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import {
@@ -24,12 +26,9 @@ interface SupportModalProps {
   trigger: ReactNode;
 }
 
-export default async function SupportModal({
-  type,
-  trigger,
-}: SupportModalProps) {
-  const tAction = await getTranslations("action");
-  const tModal = await getTranslations("supportModal");
+export default function SupportModal({ type, trigger }: SupportModalProps) {
+  const tAction = useTranslations("action");
+  const tModal = useTranslations("supportModal");
 
   const config = {
     onchain: {
