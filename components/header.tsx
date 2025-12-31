@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { LanguageType, LocaleType } from "@/types/intl";
 
 import SubscribeModal from "./forms/subscribe-modal";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -20,16 +21,17 @@ import {
 import Logo from "./ui/logo";
 
 const links = [
-  { href: "/about", label: "About Us" },
-  { href: "/development", label: "Development" },
-  { href: "/education", label: "Education" },
-  { href: "/global", label: "Global" },
-  { href: "/apply", label: "Apply" },
+  { href: "/about", key: "about" },
+  { href: "/development", key: "development" },
+  { href: "/education", key: "education" },
+  { href: "/global", key: "global" },
+  { href: "/apply", key: "apply" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
   const withoutLocale = pathname.split("/").slice(2).join("/");
   const t = useTranslations("subscribe");
+  const tHeader = useTranslations("header.menu");
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -66,7 +68,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                       : "text-muted-foreground",
                   )}
                 >
-                  {link.label}
+                  {tHeader(link.key)}
                 </Link>
               </li>
             ))}
@@ -77,7 +79,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 rel="noopener noreferrer"
                 className="hover:text-primary text-muted-foreground size-fit text-sm font-medium transition-colors"
               >
-                Conference
+                {tHeader("conference")}
               </Link>
             </li>
             <li>
@@ -96,13 +98,26 @@ export default function Header({ locale }: { locale: LocaleType }) {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    size="icon"
-                    className="text-muted-foreground"
+                    size="sm"
+                    className="text-muted-foreground gap-2"
                   >
-                    <Languages className="h-5 w-5" />
+                    <Avatar className="h-5 w-5 rounded-full">
+                      <AvatarImage
+                        src={
+                          locale === "en"
+                            ? "https://flagcdn.com/us.svg"
+                            : "https://flagcdn.com/kr.svg"
+                        }
+                        alt={locale === "en" ? "English" : "한국어"}
+                        className="object-cover"
+                      />
+                    </Avatar>
+                    <span className="text-sm font-medium">
+                      {locale === "en" ? "English" : "한국어"}
+                    </span>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
+                <DropdownMenuContent className="min-w-[6rem]">
                   {languages.map((lang) => (
                     <Link
                       key={lang.code}
@@ -161,7 +176,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                         : "text-muted-foreground",
                     )}
                   >
-                    {link.label}
+                    {tHeader(link.key)}
                   </Link>
                 </li>
               ))}
@@ -172,7 +187,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   rel="noopener noreferrer"
                   className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black"
                 >
-                  Conference
+                  {tHeader("conference")}
                 </Link>
               </li>
 

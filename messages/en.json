@@ -162,15 +162,15 @@
           },
           "apisPayments": {
             "title": "APIs & Payments",
-            "description": "Tools and platforms for easy integration of Bitcoin payments in applications"
+            "description": "Tools and platforms for easy integration of \n Bitcoin payments in applications"
           },
           "utilities": {
             "title": "Wallets",
-            "description": "Various software and hardware wallet solutions for securely storing and managing Bitcoin"
+            "description": "Various software and hardware wallet solutions \n for securely storing and managing Bitcoin"
           },
           "research": {
             "title": "Research",
-            "description": "Explore academic papers, technical research, and whitepapers related to Bitcoin"
+            "description": "Explore academic papers, technical research, \n and whitepapers related to Bitcoin"
           }
         }
       },
@@ -180,15 +180,15 @@
         "items": {
           "librariesSdks": {
             "title": "Libraries",
-            "description": "Libraries and development kits for building Lightning Network applications"
+            "description": "Libraries and development kits \n for building Lightning Network applications"
           },
           "lspsEnterprise": {
             "title": "APIs & Payments",
-            "description": "Tools and platforms for easy integration of Lightning Network payments in applications"
+            "description": "Tools and platforms for easy integration of \n Lightning Network payments in applications"
           },
           "dashboardsMonitoring": {
             "title": "Wallets",
-            "description": "Various wallet solutions supporting Lightning Network for fast payments experience"
+            "description": "Various wallet solutions supporting \n Lightning Network for fast payments experience"
           },
           "routingLiquidity": {
             "title": "Research",
@@ -417,6 +417,7 @@
     }
   },
   "supportModal": {
+    "title": "Support Bitomun",
     "onchain": {
       "title": "Onchain Support",
       "description": "All funds are used for developer training, material translation and management, and free events"
@@ -753,6 +754,16 @@
         "title": "Developer Books",
         "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references"
       }
+    }
+  },
+  "header": {
+    "menu": {
+      "about": "About Us",
+      "development": "Development",
+      "education": "Education",
+      "global": "Global",
+      "apply": "Apply",
+      "conference": "Conference"
     }
   },
   "subscribe": {

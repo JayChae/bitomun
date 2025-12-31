@@ -159,19 +159,19 @@
         "items": {
           "librariesSdks": {
             "title": "라이브러리",
-            "description": "비트코인 애플리케이션을 구축하기 위한 기초 코드를 제공하는 소프트웨어 라이브러리와 개발 도구 키트입니다"
+            "description": "비트코인 애플리케이션을 구축하기 위한 기초 코드를 \n 제공하는 소프트웨어 라이브러리와 개발 도구 키트입니다"
           },
           "apisPayments": {
             "title": "API & 결제",
-            "description": "애플리케이션에서 비트코인 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
+            "description": "애플리케이션에서 비트코인 결제를 \n 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "utilities": {
             "title": "지갑",
-            "description": "비트코인을 안전하게 보관하고 관리할 수 있는 다양한 소프트웨어 및 하드웨어 지갑 솔루션입니다"
+            "description": "비트코인을 안전하게 보관하고 관리할 수 있는 \n 다양한 소프트웨어 및 하드웨어 지갑 솔루션입니다"
           },
           "research": {
             "title": "연구 자료",
-            "description": "비트코인과 관련된 논문, 기술 연구, 백서 등을 탐색하세요"
+            "description": "비트코인과 관련된 \n 논문, 기술 연구, 백서 등을 탐색하세요"
           }
         }
       },
@@ -181,19 +181,19 @@
         "items": {
           "librariesSdks": {
             "title": "라이브러리",
-            "description": "라이트닝 네트워크 애플리케이션을 구축하기 위한 라이브러리와 개발 도구 키트입니다"
+            "description": "라이트닝 네트워크 애플리케이션을 \n 구축하기 위한 라이브러리와 개발 도구 키트입니다"
           },
           "lspsEnterprise": {
             "title": "API & 결제",
-            "description": "애플리케이션에서 라이트닝 네트워크 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다"
+            "description": "애플리케이션에서 라이트닝 네트워크 결제를 \n 쉽게 통합할 수 있는 도구와 플랫폼입니다"
           },
           "dashboardsMonitoring": {
             "title": "지갑",
-            "description": "라이트닝 네트워크를 지원하는 다양한 지갑 솔루션으로 빠른 결제를 경험할 수 있습니다"
+            "description": "라이트닝 네트워크를 지원하는 다양한 지갑 솔루션으로 \n 빠른 결제를 경험할 수 있습니다"
           },
           "routingLiquidity": {
             "title": "연구 자료",
-            "description": "라이트닝 네트워크와 관련된 논문, 기술 연구, 백서 등을 탐색하세요"
+            "description": "라이트닝 네트워크와 관련된 \n 논문, 기술 연구, 백서 등을 탐색하세요"
           }
         }
       },
@@ -419,6 +419,7 @@
     }
   },
   "supportModal": {
+    "title": "비토문에 후원하세요",
     "onchain": {
       "title": "온체인 후원",
       "description": "모든 금액은 개발자 양성, 자료 번역 및 관리, 행사 개최에 사용됩니다"
@@ -640,6 +641,16 @@
     "countries": {
       "australia": "호주",
       "new-zealand": "뉴질랜드"
+    }
+  },
+  "header": {
+    "menu": {
+      "about": "소개",
+      "development": "개발",
+      "education": "교육",
+      "global": "글로벌",
+      "apply": "신청",
+      "conference": "컨퍼런스"
     }
   },
   "subscribe": {

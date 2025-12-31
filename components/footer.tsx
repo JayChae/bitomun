@@ -19,7 +19,7 @@ async function Footer() {
           </a>
         </div> */}
 
-        <Link
+        {/* <Link
           href="/support"
           className="group hover:text-primary hover:bg-primary relative overflow-hidden rounded-full px-6 py-3 font-bold"
         >
@@ -27,7 +27,7 @@ async function Footer() {
             {t("support.title")}
           </span>
           <span className="animate-shimmer absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent hover:bg-transparent"></span>
-        </Link>
+        </Link> */}
 
         <p className="text-center">
           © {new Date().getFullYear()} Bitomun. Empowering through knowledge.
