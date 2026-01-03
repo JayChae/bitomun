@@ -53,7 +53,7 @@ export default async function ApplyPage({ params }: Props) {
   ] as const;
 
   return (
-    <div>
+    <div className="flex min-h-[80dvh] flex-col justify-center md:min-h-[84dvh] lg:min-h-[87dvh]">
       {/* Hero */}
       <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl space-y-6 text-center">
