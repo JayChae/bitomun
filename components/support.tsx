@@ -1,18 +1,13 @@
 "use client";
 
 import { Bitcoin, Zap } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 
 import SupportModal from "./support-modals";
 
 export default function Support() {
-  const pathname = usePathname();
   const t = useTranslations("supportModal");
   const tAbout = useTranslations("about");
-
-  // support 페이지에서는 표시하지 않음
-  if (pathname.includes("/support")) return null;
 
   return (
     <section className="relative overflow-hidden px-4 pt-20 pb-24 sm:px-6 lg:px-8">

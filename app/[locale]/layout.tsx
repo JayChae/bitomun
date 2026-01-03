@@ -13,7 +13,6 @@ import {
   OrganizationJsonLd,
   WebsiteJsonLd,
 } from "@/components/json-ld";
-import Support from "@/components/support";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 
@@ -54,7 +53,6 @@ export default async function Layout({
           <Toaster position="top-center" />
           <Header locale={locale} />
           <main className="min-w-full pt-16">{children}</main>
-          <Support />
           <Footer />
           <FloatingButton />
         </NextIntlClientProvider>

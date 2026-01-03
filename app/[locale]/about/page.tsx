@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import Support from "@/components/support";
 import SupportModal from "@/components/support-modals";
 import IntroSection, { IntroDescription } from "@/components/ui/intro-section";
 
@@ -152,62 +153,7 @@ export default async function AboutPage({ params }: Props) {
           </div>
         </div>
       </section>
-      {/* support section */}
-      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
-            {t("support.title")}
-          </h2>
-
-          <div className="mx-auto max-w-3xl">
-            {/* Support Cards */}
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-              <SupportModal
-                type="onchain"
-                trigger={
-                  <button
-                    type="button"
-                    className="group w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:border-[#f7931a] hover:bg-zinc-800 sm:p-8"
-                  >
-                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f7931a]/10 transition-colors group-hover:bg-[#f7931a]/20 sm:h-14 sm:w-14">
-                      <Bitcoin className="h-6 w-6 text-[#f7931a] sm:h-7 sm:w-7" />
-                    </div>
-                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
-                      {t("support.onchain")}
-                    </h3>
-                    <p className="text-xs text-gray-400 sm:text-sm">
-                      Bitcoin Address
-                    </p>
-                  </button>
-                }
-              />
-              <SupportModal
-                type="lightning"
-                trigger={
-                  <button
-                    type="button"
-                    className="group w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:border-[#fbbf24] hover:bg-zinc-800 sm:p-8"
-                  >
-                    <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#fbbf24]/10 transition-colors group-hover:bg-[#fbbf24]/20 sm:h-14 sm:w-14">
-                      <Zap className="h-6 w-6 text-[#fbbf24] sm:h-7 sm:w-7" />
-                    </div>
-                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
-                      {t("support.lightning")}
-                    </h3>
-                    <p className="text-xs text-gray-400 sm:text-sm">
-                      Lightning Address
-                    </p>
-                  </button>
-                }
-              />
-            </div>
-          </div>
-          {/* Description */}
-          <p className="mt-8 text-center text-sm leading-relaxed text-gray-400 sm:mb-10 sm:text-base">
-            {t("support.description")}
-          </p>
-        </div>
-      </section>
+      <Support />
     </div>
   );
 }
