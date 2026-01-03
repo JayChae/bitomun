@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import IntroSection, {
@@ -37,6 +38,7 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
       borderColor: "hover:border-orange-500/50",
+      image: "/icons/asia.svg",
     },
     {
       key: "europe",
@@ -47,6 +49,7 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
       borderColor: "hover:border-blue-500/50",
+      image: "/icons/europe.svg",
     },
     {
       key: "africa",
@@ -57,6 +60,7 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-amber-500/40 group-hover:via-yellow-500/40 group-hover:to-lime-500/40",
       borderColor: "hover:border-yellow-500/50",
+      image: "/icons/africa.svg",
     },
     {
       key: "northAmerica",
@@ -67,6 +71,7 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
       borderColor: "hover:border-emerald-500/50",
+      image: "/icons/north_america.svg",
     },
     {
       key: "southAmerica",
@@ -77,6 +82,7 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-green-500/40 group-hover:via-emerald-500/40 group-hover:to-teal-500/40",
       borderColor: "hover:border-green-500/50",
+      image: "/icons/south_america.svg",
     },
     {
       key: "oceania",
@@ -87,11 +93,12 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
       borderColor: "hover:border-cyan-500/50",
+      image: "/icons/oceania.svg",
     },
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="flex min-h-[80dvh] flex-col justify-center md:min-h-[84dvh] lg:min-h-[87dvh]">
       <IntroSection>
         <div className="space-y-6">
           <IntroTitle>{t("title")}</IntroTitle>
@@ -100,7 +107,7 @@ export default async function GlobalPage({ params }: Props) {
       </IntroSection>
 
       {/* Continents Grid */}
-      <section className="px-4 pb-24 sm:px-6 lg:px-8">
+      <section className="flex-1 p-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {continents.map((continent) => (
@@ -121,6 +128,7 @@ type ContinentData = {
   gradient: string;
   hoverGradient: string;
   borderColor: string;
+  image: string;
 };
 
 type ContinentCardProps = {
@@ -147,8 +155,18 @@ function ContinentCard({ continent }: ContinentCardProps) {
         />
 
         {/* Content */}
-        <div className="relative flex h-full flex-col items-center justify-center p-6">
-          <h2 className="mb-2 text-xl font-bold transition-transform duration-300 md:text-2xl">
+        <div className="relative flex h-full flex-col items-center justify-center gap-4 p-6">
+          {/* Continent Icon */}
+          <div className="relative size-24 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100">
+            <Image
+              src={continent.image}
+              alt={continent.title}
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          <h2 className="text-xl font-bold transition-transform duration-300 md:text-2xl">
             {continent.title}
           </h2>
           {/* <p className="text-muted-foreground line-clamp-2 text-center text-sm transition-opacity duration-300 group-hover:opacity-80">

@@ -172,7 +172,17 @@ export default async function Home({ params }: Props) {
                     continent.hoverGradient,
                   )}
                 />
-                <div className="relative flex h-full flex-col items-center justify-center p-5">
+                <div className="relative flex h-full flex-col items-center justify-center gap-3 p-5">
+                  {/* Continent Icon */}
+                  <div className="relative size-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 md:size-20">
+                    <Image
+                      src={continent.image}
+                      alt={t(continent.title)}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+
                   <h3 className="text-xl font-bold md:text-2xl">
                     {t(continent.title)}
                   </h3>
@@ -358,6 +368,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
     borderColor: "hover:border-orange-500/50",
+    image: "/icons/asia.svg",
   },
   {
     id: "europe",
@@ -367,6 +378,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
     borderColor: "hover:border-blue-500/50",
+    image: "/icons/europe.svg",
   },
   {
     id: "africa",
@@ -376,6 +388,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-amber-500/40 group-hover:via-yellow-500/40 group-hover:to-lime-500/40",
     borderColor: "hover:border-yellow-500/50",
+    image: "/icons/africa.svg",
   },
   {
     id: "northAmerica",
@@ -385,6 +398,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
     borderColor: "hover:border-emerald-500/50",
+    image: "/icons/north_america.svg",
   },
   {
     id: "southAmerica",
@@ -394,6 +408,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-green-500/40 group-hover:via-emerald-500/40 group-hover:to-teal-500/40",
     borderColor: "hover:border-green-500/50",
+    image: "/icons/south_america.svg",
   },
   {
     id: "oceania",
@@ -403,6 +418,7 @@ const CONTINENTS = [
     hoverGradient:
       "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
     borderColor: "hover:border-cyan-500/50",
+    image: "/icons/oceania.svg",
   },
 ] as const;
 
