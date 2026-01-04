@@ -172,17 +172,24 @@ export default async function Home({ params }: Props) {
                     continent.hoverGradient,
                   )}
                 />
-                <div className="relative flex h-full flex-col items-center justify-center gap-3 p-5">
-                  {/* Continent Icon */}
-                  <div className="relative size-16 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100 md:size-20">
-                    <Image
-                      src={continent.image}
-                      alt={t(continent.title)}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
 
+                {/* Continent Image */}
+                <div
+                  className={cn(
+                    "absolute top-0 right-0 left-0 h-full w-full opacity-60 transition-all duration-300 group-hover:scale-110 group-hover:opacity-80",
+                    continent.imageScale,
+                  )}
+                >
+                  <Image
+                    src={continent.image}
+                    alt={t(continent.title)}
+                    fill
+                    className="object-contain object-center"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="relative flex h-full flex-col items-center justify-center gap-3 p-5">
                   <h3 className="text-xl font-bold md:text-2xl">
                     {t(continent.title)}
                   </h3>
@@ -359,7 +366,18 @@ const DEV_RESOURCES = [
   },
 ] as const;
 
-const CONTINENTS = [
+type ContinentData = {
+  id: string;
+  title: string;
+  link: string;
+  gradient: string;
+  hoverGradient: string;
+  borderColor: string;
+  image: string;
+  imageScale?: string;
+};
+
+const CONTINENTS: ContinentData[] = [
   {
     id: "asia",
     title: "global.continents.asia",
@@ -369,6 +387,7 @@ const CONTINENTS = [
       "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
     borderColor: "hover:border-orange-500/50",
     image: "/icons/asia.svg",
+    imageScale: "scale-125 group-hover:scale-150",
   },
   {
     id: "europe",
@@ -379,6 +398,7 @@ const CONTINENTS = [
       "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
     borderColor: "hover:border-blue-500/50",
     image: "/icons/europe.svg",
+    imageScale: "scale-125 group-hover:scale-150",
   },
   {
     id: "africa",
@@ -399,6 +419,7 @@ const CONTINENTS = [
       "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
     borderColor: "hover:border-emerald-500/50",
     image: "/icons/north_america.svg",
+    imageScale: "scale-125 group-hover:scale-150",
   },
   {
     id: "southAmerica",
@@ -419,8 +440,9 @@ const CONTINENTS = [
       "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
     borderColor: "hover:border-cyan-500/50",
     image: "/icons/oceania.svg",
+    imageScale: "scale-125 group-hover:scale-150",
   },
-] as const;
+];
 
 const EDUCATION_RESOURCES = [
   {

@@ -39,6 +39,7 @@ export default async function GlobalPage({ params }: Props) {
         "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
       borderColor: "hover:border-orange-500/50",
       image: "/icons/asia.svg",
+      imageScale: "scale-125 group-hover:scale-150",
     },
     {
       key: "europe",
@@ -50,6 +51,7 @@ export default async function GlobalPage({ params }: Props) {
         "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
       borderColor: "hover:border-blue-500/50",
       image: "/icons/europe.svg",
+      imageScale: "scale-125 group-hover:scale-150",
     },
     {
       key: "africa",
@@ -72,6 +74,7 @@ export default async function GlobalPage({ params }: Props) {
         "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
       borderColor: "hover:border-emerald-500/50",
       image: "/icons/north_america.svg",
+      imageScale: "scale-125 group-hover:scale-150",
     },
     {
       key: "southAmerica",
@@ -94,6 +97,7 @@ export default async function GlobalPage({ params }: Props) {
         "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
       borderColor: "hover:border-cyan-500/50",
       image: "/icons/oceania.svg",
+      imageScale: "scale-125 group-hover:scale-150",
     },
   ];
 
@@ -129,6 +133,7 @@ type ContinentData = {
   hoverGradient: string;
   borderColor: string;
   image: string;
+  imageScale?: string;
 };
 
 type ContinentCardProps = {
@@ -154,46 +159,27 @@ function ContinentCard({ continent }: ContinentCardProps) {
           )}
         />
 
+        {/* Continent Image - Left Side */}
+        <div
+          className={cn(
+            "absolute top-0 right-0 left-10 h-full w-4/5 opacity-60 transition-all duration-300 group-hover:scale-110 group-hover:opacity-80",
+            continent.imageScale,
+          )}
+        >
+          <Image
+            src={continent.image}
+            alt={continent.title}
+            fill
+            className="object-contain object-center"
+          />
+        </div>
+
         {/* Content */}
         <div className="relative flex h-full flex-col items-center justify-center gap-4 p-6">
-          {/* Continent Icon */}
-          <div className="relative size-24 opacity-80 transition-all duration-300 group-hover:scale-110 group-hover:opacity-100">
-            <Image
-              src={continent.image}
-              alt={continent.title}
-              fill
-              className="object-contain"
-            />
-          </div>
-
           <h2 className="text-xl font-bold transition-transform duration-300 md:text-2xl">
             {continent.title}
           </h2>
-          {/* <p className="text-muted-foreground line-clamp-2 text-center text-sm transition-opacity duration-300 group-hover:opacity-80">
-            {continent.description}
-          </p> */}
-
-          {/* Arrow indicator */}
-          {/* <div className="absolute top-6 right-6 opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </div> */}
         </div>
-
-        {/* Decorative elements */}
-        {/* <div className="absolute -top-12 -right-12 h-32 w-32 rounded-full bg-white/5 blur-2xl transition-all duration-500 group-hover:scale-150" />
-        <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/5 blur-xl transition-all duration-500 group-hover:scale-150" /> */}
       </div>
     </Link>
   );
