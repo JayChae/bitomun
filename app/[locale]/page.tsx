@@ -208,22 +208,22 @@ export default async function Home({ params }: Props) {
 
       {/* Highlights Section */}
       <Section
-        title="2025 Bitomun Highlights"
+        title={t("highlights.title")}
         description=""
         className=""
-        layoutClassName="mx-20 max-w-full"
+        layoutClassName="mx-10 md:mx-20 max-w-full"
       >
-        <div className="grid grid-cols-2 gap-4 pt-10 md:grid-cols-5">
-          {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:pt-10">
+          {Array.from({ length: 8 }, (_, i) => i + 1).map((num) => (
             <div
               key={num}
-              className="relative aspect-[3/2] w-full overflow-hidden rounded-lg md:aspect-[3/2]"
+              className="group relative aspect-[3/2] w-full overflow-hidden rounded-lg md:aspect-[3/2]"
             >
               <Image
                 src={`/images/2025_bitomun_highlights-${num}.jpg`}
                 alt={`2025 Bitomun Highlight ${num}`}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-300 group-hover:scale-120"
                 sizes="(min-width: 768px) 20vw, 50vw"
               />
             </div>
@@ -344,7 +344,7 @@ type SectionProps = {
   children: ReactNode;
   className?: string;
   layoutClassName?: string;
-  title: string;
+  title: string | ReactNode;
   description: string;
 };
 
@@ -359,7 +359,9 @@ function Section({
     <section className={cn("px-4 py-32 sm:px-6 lg:px-8", className)}>
       <div className={cn("mx-auto max-w-4xl", layoutClassName)}>
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold">{title}</h2>
+          <h2 className="mb-4 text-3xl font-bold whitespace-pre-line md:whitespace-normal">
+            {title}
+          </h2>
           <p className="text-muted-foreground mx-auto max-w-2xl">
             {description}
           </p>
