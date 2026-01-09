@@ -11,6 +11,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
+import Stack from "@/components/card-rotate";
 import SubscribeModal from "@/components/forms/subscribe-modal";
 import BackgroundDecoration from "@/components/ui/background-decoration";
 import { Button } from "@/components/ui/button";
@@ -310,28 +311,38 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
           {/* Right - Visual Element */}
           <div className="relative hidden lg:col-span-5 lg:block">
             <div className="relative mx-auto aspect-square max-w-md">
-              {/* Background Shapes */}
-              <div className="bg-primary/10 absolute inset-0 rotate-12" />
-              <div className="bg-secondary/10 absolute inset-0 translate-x-4 translate-y-4 -rotate-6" />
-
-              {/* Main Icon */}
-              <div className="border-foreground absolute inset-8 flex items-center justify-center border-4 bg-orange-500/70">
-                <Image
-                  src="/images/bitomun_key.webp"
-                  alt="Bitomun Key Icon"
-                  width={250}
-                  height={250}
-                  priority
-                />
-              </div>
-
-              {/* Floating Elements */}
-              <div className="bg-secondary border-foreground absolute -top-4 -right-4 rotate-12 border-2 p-4">
-                <Zap className="text-background h-8 w-8" />
-              </div>
-              <div className="bg-primary border-foreground absolute -bottom-4 -left-4 -rotate-12 border-2 p-4">
-                <Bitcoin className="text-background h-8 w-8" />
-              </div>
+              <Stack
+                cards={[
+                  // Bitomun Key Image with Background
+                  <div
+                    key="bitomun-key"
+                    className="relative h-full w-full bg-gradient-to-br from-orange-500 to-orange-600"
+                  >
+                    <Image
+                      src="/images/bitomun_key.webp"
+                      alt="Bitomun Key"
+                      fill
+                      className="pointer-events-none object-contain p-8"
+                      priority
+                    />
+                  </div>,
+                  // Highlight Images
+                  ...Array.from({ length: 8 }, (_, i) => (
+                    <Image
+                      key={`highlight-${i + 1}`}
+                      src={`/images/2025_bitomun_highlights-${i + 1}.webp`}
+                      alt={`2025 Bitomun Highlight ${i + 1}`}
+                      fill
+                      className="pointer-events-none object-cover"
+                    />
+                  )),
+                ]}
+                autoplay={true}
+                autoplayDelay={2000}
+                pauseOnHover={true}
+                mobileClickOnly={true}
+                randomRotation={true}
+              />
             </div>
           </div>
         </div>
