@@ -59,6 +59,7 @@ export default async function Home({ params }: Props) {
         title={t("development.title")}
         description={t("development.description")}
         className=""
+        layoutClassName=""
       >
         <ul className="flex flex-wrap justify-center gap-6">
           {DEV_RESOURCES.map((resource, index) => {
@@ -116,6 +117,7 @@ export default async function Home({ params }: Props) {
         title={t("education.title")}
         description={t("education.description")}
         className="bg-gradient-to-l from-yellow-500/10 to-transparent"
+        layoutClassName=""
       >
         <ul className="flex flex-wrap justify-center gap-4">
           {EDUCATION_RESOURCES.map((resource) => {
@@ -149,6 +151,7 @@ export default async function Home({ params }: Props) {
         title={t("global.title")}
         description={t("global.description")}
         className="bg-gradient-to-r from-blue-500/10 to-transparent"
+        layoutClassName=""
       >
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
           {CONTINENTS.map((continent) => (
@@ -203,11 +206,37 @@ export default async function Home({ params }: Props) {
         </div>
       </Section>
 
+      {/* Highlights Section */}
+      <Section
+        title="2025 Bitomun Highlights"
+        description=""
+        className=""
+        layoutClassName="mx-20 max-w-full"
+      >
+        <div className="grid grid-cols-2 gap-4 pt-10 md:grid-cols-5">
+          {Array.from({ length: 10 }, (_, i) => i + 1).map((num) => (
+            <div
+              key={num}
+              className="relative aspect-[3/2] w-full overflow-hidden rounded-lg md:aspect-[3/2]"
+            >
+              <Image
+                src={`/images/2025_bitomun_highlights-${num}.jpg`}
+                alt={`2025 Bitomun Highlight ${num}`}
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 20vw, 50vw"
+              />
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* Internship Section */}
       <Section
         title={t("internship.title")}
         description={t("internship.description")}
-        className=""
+        className="bg-gradient-to-r from-purple-500/10 to-transparent"
+        layoutClassName=""
       >
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/internship">
@@ -314,14 +343,21 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
 type SectionProps = {
   children: ReactNode;
   className?: string;
+  layoutClassName?: string;
   title: string;
   description: string;
 };
 
-function Section({ children, className, title, description }: SectionProps) {
+function Section({
+  children,
+  className,
+  title,
+  description,
+  layoutClassName,
+}: SectionProps) {
   return (
     <section className={cn("px-4 py-32 sm:px-6 lg:px-8", className)}>
-      <div className="mx-auto max-w-4xl">
+      <div className={cn("mx-auto max-w-4xl", layoutClassName)}>
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">{title}</h2>
           <p className="text-muted-foreground mx-auto max-w-2xl">
