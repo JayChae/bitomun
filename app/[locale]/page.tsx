@@ -220,7 +220,7 @@ export default async function Home({ params }: Props) {
               className="group relative aspect-[3/2] w-full overflow-hidden rounded-lg md:aspect-[3/2]"
             >
               <Image
-                src={`/images/2025_bitomun_highlights-${num}.jpg`}
+                src={`/images/2025_bitomun_highlights-${num}.webp`}
                 alt={`2025 Bitomun Highlight ${num}`}
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-120"
