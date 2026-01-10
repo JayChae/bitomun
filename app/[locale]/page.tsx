@@ -22,7 +22,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -266,8 +265,17 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
       <BackgroundDecoration />
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
-        <div className="relative mx-auto size-24 sm:size-32 md:size-40 lg:hidden">
-          <Logo alt="BITOMUN" fill className="object-contain drop-shadow-2xl" />
+        {/* Mobile Bitomun Key Image */}
+        <div className="relative mx-auto size-36 sm:size-42 md:size-52 lg:hidden">
+          <div className="relative size-full overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500/90 to-orange-600/90 shadow-2xl ring-1 ring-orange-400/20">
+            <Image
+              src="/images/bitomun_key.webp"
+              alt="Bitomun Key"
+              fill
+              className="pointer-events-none object-contain p-6 sm:p-8"
+              priority
+            />
+          </div>
         </div>
         <div className="grid h-full items-center gap-8 py-8 lg:grid-cols-12 lg:py-12">
           {/* Left - Main Content */}
@@ -313,10 +321,20 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
             <div className="relative mx-auto aspect-square max-w-md">
               <Stack
                 cards={[
+                  // Highlight Images (reversed order: 8 to 1)
+                  ...Array.from({ length: 8 }, (_, i) => (
+                    <Image
+                      key={`highlight-${8 - i}`}
+                      src={`/images/2025_bitomun_highlights-${8 - i}.webp`}
+                      alt={`2025 Bitomun Highlight ${8 - i}`}
+                      fill
+                      className="pointer-events-none object-cover"
+                    />
+                  )),
                   // Bitomun Key Image with Background
                   <div
                     key="bitomun-key"
-                    className="relative h-full w-full bg-gradient-to-br from-orange-500 to-orange-600"
+                    className="relative size-full bg-gradient-to-br from-orange-500 to-orange-600"
                   >
                     <Image
                       src="/images/bitomun_key.webp"
@@ -326,22 +344,11 @@ function Hero({ description, button1, subscribeButton }: HeroProps) {
                       priority
                     />
                   </div>,
-                  // Highlight Images
-                  ...Array.from({ length: 8 }, (_, i) => (
-                    <Image
-                      key={`highlight-${i + 1}`}
-                      src={`/images/2025_bitomun_highlights-${i + 1}.webp`}
-                      alt={`2025 Bitomun Highlight ${i + 1}`}
-                      fill
-                      className="pointer-events-none object-cover"
-                    />
-                  )),
                 ]}
                 autoplay={true}
                 autoplayDelay={2000}
                 pauseOnHover={true}
                 mobileClickOnly={true}
-                randomRotation={true}
               />
             </div>
           </div>
